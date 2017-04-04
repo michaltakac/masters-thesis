@@ -1,0 +1,18 @@
+\begin{theglossary} 
+
+ \nomgroup{Symbols}
+
+  \item [{$\upmu$}]\begingroup mikro, $10^{-6}$\nomeqref {2.0}
+		\nompageref{3}
+
+ \nomgroup{S}
+
+  \item [{SI}]\begingroup Syst\`eme International\nomeqref {2.0}
+		\nompageref{3}
+
+ \nomgroup{V}
+
+  \item [{V}]\begingroup volt, základná jednotka napätia v sústave SI\nomeqref {2.0}
+		\nompageref{3}
+
+\end{theglossary}

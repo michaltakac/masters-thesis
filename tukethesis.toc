@@ -1,0 +1,30 @@
+\select@language {english}
+\contentsline {section}{\hbox to\@tempdima {\hfil }Introduction}{1}{section*.6}
+\contentsline {section}{\numberline {1}Problem expression}{2}{section.1}
+\contentsline {section}{\numberline {2}Theoretical analysis}{3}{section.2}
+\contentsline {section}{\numberline {3}Analysis of current state of virtual and augmented reality}{4}{section.3}
+\contentsline {subsection}{\numberline {3.1}Building virtual reality applications and experiences}{4}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Virtual reality on the web}{4}{subsection.3.2}
+\contentsline {section}{\numberline {4}Conceptualisation and design}{6}{section.4}
+\contentsline {subsection}{\numberline {4.1}Inputs and objections}{6}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Functionality planning}{6}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Virtual user interface}{6}{subsection.4.3}
+\contentsline {section}{\numberline {5}Implementation of virtual reality application}{7}{section.5}
+\contentsline {subsection}{\numberline {5.1}Technologies}{7}{subsection.5.1}
+\contentsline {subsubsection}{\numberline {5.1.1}Three.js}{7}{subsubsection.5.1.1}
+\contentsline {subsubsection}{\numberline {5.1.2}A-Frame}{7}{subsubsection.5.1.2}
+\contentsline {subsubsection}{\numberline {5.1.3}React}{7}{subsubsection.5.1.3}
+\contentsline {subsubsection}{\numberline {5.1.4}Redux}{8}{subsubsection.5.1.4}
+\contentsline {subsubsection}{\numberline {5.1.5}Webpack}{8}{subsubsection.5.1.5}
+\contentsline {subsubsection}{\numberline {5.1.6}Math.js}{9}{subsubsection.5.1.6}
+\contentsline {subsection}{\numberline {5.2}Test-driven development}{10}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Virtual calculator entity}{10}{subsection.5.3}
+\contentsline {subsubsection}{\numberline {5.3.1}Parsing equations with Math.js}{11}{subsubsection.5.3.1}
+\contentsline {subsection}{\numberline {5.4}Parametrized function grid entity}{11}{subsection.5.4}
+\contentsline {subsection}{\numberline {5.5}Interactive function settings panel entity}{11}{subsection.5.5}
+\contentsline {subsection}{\numberline {5.6}Interactions}{11}{subsection.5.6}
+\contentsline {subsubsection}{\numberline {5.6.1}Grabbing}{11}{subsubsection.5.6.1}
+\contentsline {subsubsection}{\numberline {5.6.2}Scaling}{11}{subsubsection.5.6.2}
+\contentsline {subsection}{\numberline {5.7}Building and deploying the application to web hosting}{11}{subsection.5.7}
+\contentsline {section}{\numberline {6}Conclusion}{13}{section.6}
+\contentsline {section}{\hbox to\@tempdima {\hfil }{Bibliography}}{14}{section*.7}
