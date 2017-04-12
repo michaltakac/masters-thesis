@@ -1,6 +1,9 @@
 \select@language {english}
-\contentsline {figure}{\numberline {5\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}1}{\ignorespaces Bundling dependencies and static assets with Webpack \ref {r:1}}}{9}{figure.5.1}
-\contentsline {figure}{\numberline {5\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}2}{\ignorespaces Virtual calculator entity \ref {r:2}}}{10}{figure.5.2}
-\contentsline {figure}{\numberline {5\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}3}{\ignorespaces Function settings entity \ref {r:4}}}{11}{figure.5.3}
-\contentsline {figure}{\numberline {5\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}4}{\ignorespaces Grabbing functionality \ref {r:5}}}{12}{figure.5.4}
-\contentsline {figure}{\numberline {5\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}5}{\ignorespaces Scaling functionality \ref {r:6}}}{12}{figure.5.5}
+\contentsline {figure}{\numberline {4\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}1}{\ignorespaces A-Frame Inspector window.}}{12}{figure.4.1}
+\contentsline {figure}{\numberline {4\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}2}{\ignorespaces Data in a Flux application flows in a single direction.}}{15}{figure.4.2}
+\contentsline {figure}{\numberline {4\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}3}{\ignorespaces Detailed Flux application architecture diagram.}}{16}{figure.4.3}
+\contentsline {figure}{\numberline {4\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}4}{\ignorespaces Bundling dependencies and static assets with Webpack}}{19}{figure.4.4}
+\contentsline {figure}{\numberline {6\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}1}{\ignorespaces Virtual calculator entity \ref {r:2}}}{21}{figure.6.1}
+\contentsline {figure}{\numberline {6\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}2}{\ignorespaces Function settings entity \ref {r:4}}}{22}{figure.6.2}
+\contentsline {figure}{\numberline {6\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}3}{\ignorespaces Grabbing functionality \ref {r:5}}}{22}{figure.6.3}
+\contentsline {figure}{\numberline {6\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}4}{\ignorespaces Scaling functionality \ref {r:6}}}{23}{figure.6.4}
