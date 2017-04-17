@@ -3,7 +3,10 @@
 \contentsline {figure}{\numberline {4\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}2}{\ignorespaces Data in a Flux application flows in a single direction.}}{15}{figure.4.2}
 \contentsline {figure}{\numberline {4\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}3}{\ignorespaces Detailed Flux application architecture diagram.}}{16}{figure.4.3}
 \contentsline {figure}{\numberline {4\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}4}{\ignorespaces Bundling dependencies and static assets with Webpack}}{19}{figure.4.4}
-\contentsline {figure}{\numberline {6\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}1}{\ignorespaces Virtual calculator entity \ref {r:2}}}{21}{figure.6.1}
-\contentsline {figure}{\numberline {6\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}2}{\ignorespaces Function settings entity \ref {r:4}}}{22}{figure.6.2}
-\contentsline {figure}{\numberline {6\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}3}{\ignorespaces Grabbing functionality \ref {r:5}}}{22}{figure.6.3}
-\contentsline {figure}{\numberline {6\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}4}{\ignorespaces Scaling functionality \ref {r:6}}}{23}{figure.6.4}
+\contentsline {figure}{\numberline {6\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}1}{\ignorespaces Detail page of JavaScript package in NPM registry with the script to install highlighted.}}{23}{figure.6.1}
+\contentsline {figure}{\numberline {6\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}2}{\ignorespaces Project folder structure}}{25}{figure.6.2}
+\contentsline {figure}{\numberline {6\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}3}{\ignorespaces Development server is running.}}{27}{figure.6.3}
+\contentsline {figure}{\numberline {6\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}4}{\ignorespaces Calculator component}}{47}{figure.6.4}
+\contentsline {figure}{\numberline {6\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}5}{\ignorespaces SettingsPanel component}}{54}{figure.6.5}
+\contentsline {figure}{\numberline {6\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}6}{\ignorespaces Grabbing functionality}}{56}{figure.6.6}
+\contentsline {figure}{\numberline {6\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}7}{\ignorespaces Scaling functionality}}{57}{figure.6.7}
