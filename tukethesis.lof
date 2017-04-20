@@ -1,12 +1,25 @@
 \select@language {english}
-\contentsline {figure}{\numberline {4\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}1}{\ignorespaces A-Frame Inspector window.}}{12}{figure.4.1}
-\contentsline {figure}{\numberline {4\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}2}{\ignorespaces Data in a Flux application flows in a single direction.}}{15}{figure.4.2}
-\contentsline {figure}{\numberline {4\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}3}{\ignorespaces Detailed Flux application architecture diagram.}}{16}{figure.4.3}
-\contentsline {figure}{\numberline {4\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}4}{\ignorespaces Bundling dependencies and static assets with Webpack}}{19}{figure.4.4}
-\contentsline {figure}{\numberline {6\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}1}{\ignorespaces Detail page of JavaScript package in NPM registry with the script to install highlighted.}}{23}{figure.6.1}
-\contentsline {figure}{\numberline {6\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}2}{\ignorespaces Project folder structure}}{25}{figure.6.2}
-\contentsline {figure}{\numberline {6\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}3}{\ignorespaces Development server is running.}}{27}{figure.6.3}
-\contentsline {figure}{\numberline {6\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}4}{\ignorespaces Calculator component}}{47}{figure.6.4}
-\contentsline {figure}{\numberline {6\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}5}{\ignorespaces SettingsPanel component}}{54}{figure.6.5}
-\contentsline {figure}{\numberline {6\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}6}{\ignorespaces Grabbing functionality}}{56}{figure.6.6}
-\contentsline {figure}{\numberline {6\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}7}{\ignorespaces Scaling functionality}}{57}{figure.6.7}
+\contentsline {figure}{\numberline {2\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}1}{\ignorespaces The~Body VR. \cite {the-body-vr-pic}}}{6}{figure.2.1}
+\contentsline {figure}{\numberline {2\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}2}{\ignorespaces Job simulator. \cite {job-simulator-pic}}}{6}{figure.2.2}
+\contentsline {figure}{\numberline {2\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}3}{\ignorespaces Calcflow. \cite {calcflow-pic}}}{7}{figure.2.3}
+\contentsline {figure}{\numberline {3\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}1}{\ignorespaces A-Frame Inspector window.}}{15}{figure.3.1}
+\contentsline {figure}{\numberline {3\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}2}{\ignorespaces Data in a Flux application flows in a single direction. \citep {flux}}}{18}{figure.3.2}
+\contentsline {figure}{\numberline {3\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}3}{\ignorespaces Detailed Flux application architecture diagram. \citep {flux}}}{18}{figure.3.3}
+\contentsline {figure}{\numberline {3\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}4}{\ignorespaces Bundling dependencies and static assets with Webpack}}{22}{figure.3.4}
+\contentsline {figure}{\numberline {5\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}1}{\ignorespaces Detail page of JavaScript package in NPM registry with the script to install highlighted.}}{28}{figure.5.1}
+\contentsline {figure}{\numberline {5\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}2}{\ignorespaces Project folder structure}}{30}{figure.5.2}
+\contentsline {figure}{\numberline {5\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}3}{\ignorespaces Started development server.}}{31}{figure.5.3}
+\contentsline {figure}{\numberline {5\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}4}{\ignorespaces \textsl {Calculator} with multiple \textsl {CalcButton} components.}}{45}{figure.5.4}
+\contentsline {figure}{\numberline {5\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}5}{\ignorespaces \texttt {SettingsPanel} component}}{59}{figure.5.5}
+\contentsline {figure}{\numberline {5\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}6}{\ignorespaces Grabbing functionality}}{60}{figure.5.6}
+\contentsline {figure}{\numberline {5\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}7}{\ignorespaces Scaling functionality}}{61}{figure.5.7}
+\contentsline {figure}{\numberline {5\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}8}{\ignorespaces Finalized MathworldVR application, deployed on live server.}}{63}{figure.5.8}
+\contentsline {figure}{\numberline {6\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}1}{\ignorespaces Steam download page.}}{70}{figure.6.1}
+\contentsline {figure}{\numberline {6\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}2}{\ignorespaces SteamVR installation button.}}{71}{figure.6.2}
+\contentsline {figure}{\numberline {6\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}3}{\ignorespaces Room setup window.}}{72}{figure.6.3}
+\contentsline {figure}{\numberline {6\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}4}{\ignorespaces Enabling the WebVR API in Chromium browser.}}{73}{figure.6.4}
+\contentsline {figure}{\numberline {6\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}5}{\ignorespaces HTC Vive headset - technical detail. \cite {htc-vive-user-guide}}}{74}{figure.6.5}
+\contentsline {figure}{\numberline {6\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}6}{\ignorespaces HTC Vive hand controllers - technical detail. \cite {htc-vive-user-guide}}}{75}{figure.6.6}
+\contentsline {figure}{\numberline {6\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}7}{\ignorespaces ParametrizedFunction component.}}{77}{figure.6.7}
+\contentsline {figure}{\numberline {6\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}8}{\ignorespaces Settings component.}}{78}{figure.6.8}
+\contentsline {figure}{\numberline {6\tmspace +\thinmuskip {.1667em}--\tmspace +\thinmuskip {.1667em}9}{\ignorespaces Calculator component.}}{79}{figure.6.9}

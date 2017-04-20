@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=latex 2016.10.16)  17 APR 2017 21:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=latex 2016.10.16)  20 APR 2017 11:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -406,6 +406,10 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
 )
+(/usr/local/texlive/2016/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
 (/usr/local/texlive/2016/texmf-dist/tex/generic/dirtree/dirtree.sty
 Package: dirtree 2012/12/11 v0.32 package wrapper for dirtree
 
@@ -534,7 +538,7 @@ LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
 \macc@depth=\count106
 \c@MaxMatrixCols=\count107
-\dotsspace@=\muskip10
+\dotsspace@=\muskip11
 \c@parentequation=\count108
 \dspbrk@lvl=\count109
 \tag@help=\toks20
@@ -726,11 +730,6 @@ Package hyperref Info: Backreferencing OFF on input line 4466.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4691.
 \c@Hy@tempcnt=\count118
-
-(/usr/local/texlive/2016/texmf-dist/tex/latex/url/url.sty
-\Urlmuskip=\muskip11
-Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-)
 LaTeX Info: Redefining \url on input line 5044.
 \XeTeXLinkMargin=\dimen134
 \Fld@menulength=\count119
@@ -765,30 +764,32 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 \Hy@SectionHShift=\skip54
 )
 (./tukethesis.aux (./introduction.aux) (./problemexpression.aux)
-(./theoreticalanalysis.aux) (./currentstate.aux) (./design.aux)
-(./implementation.aux) (./conclusion.aux) (./bibliography.aux)
-(./appendices.aux) (./appendixa.aux) (./appendixb.aux))
+(./currentstate.aux) (./design.aux) (./implementation.aux) (./conclusion.aux)
+(./bibliography.aux) (./appendices.aux) (./appendixa.aux) (./appendixb.aux
+
+LaTeX Warning: Label `r:78' multiply defined.
+
+))
 \openout1 = `tukethesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 254.
-LaTeX Font Info:    ... okay on input line 254.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 254.
-LaTeX Font Info:    ... okay on input line 254.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 254.
-LaTeX Font Info:    ... okay on input line 254.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 254.
-LaTeX Font Info:    ... okay on input line 254.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 254.
-LaTeX Font Info:    ... okay on input line 254.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 254.
-LaTeX Font Info:    ... okay on input line 254.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 254.
-LaTeX Font Info:    ... okay on input line 254.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 254.
-LaTeX Font Info:    ... okay on input line 254.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 254.
-
-(/usr/local/texlive/2016/texmf-dist/tex/latex/lm/t1lmr.fd
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 138.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 138.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 138.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 138.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 138.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 138.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 138.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 138.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 138.
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 \c@lstlisting=\count125
@@ -808,7 +809,7 @@ File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 \everyMPtoPDFconversion=\toks25
 )
 \AtBeginShipoutBox=\box31
-Package hyperref Info: Link coloring OFF on input line 254.
+Package hyperref Info: Link coloring OFF on input line 138.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -817,9 +818,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count132
 )
-LaTeX Info: Redefining \ref on input line 254.
-LaTeX Info: Redefining \pageref on input line 254.
-LaTeX Info: Redefining \nameref on input line 254.
+LaTeX Info: Redefining \ref on input line 138.
+LaTeX Info: Redefining \pageref on input line 138.
+LaTeX Info: Redefining \nameref on input line 138.
 
 (./tukethesis.out) (./tukethesis.out)
 \@outlinefile=\write4
@@ -834,43 +835,43 @@ LaTeX Warning:  No \bachelorthesis given.
 
 Non-PDF special ignored!{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/upd
 map/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 262--262
+Underfull \hbox (badness 10000) in paragraph at lines 146--146
 
  []
 
 
 LaTeX Warning:  No \bachelorthesis given.
 
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 262.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 146.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 262.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 146.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 262
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 146
 .
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 262
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 146
 .
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 262.
+(Font)              <12> on input line 146.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 262.
+(Font)              <8> on input line 146.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 262.
-LaTeX Font Info:    Try loading font information for U+lasy on input line 262.
+(Font)              <6> on input line 146.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 146.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
@@ -887,387 +888,37 @@ File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 \tf@toc=\write5
 \openout5 = `tukethesis.toc'.
 
- [10] [11]
-(./tukethesis.lof)
+ [10]
+(./tukethesis.lof
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 13.
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+))
 \tf@lof=\write6
 \openout6 = `tukethesis.lof'.
 
- [12] [13] (./tukethesis.lol
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 6.
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-! Missing $ inserted.
-<inserted text> 
-                $
-l.11 ...E_TEXT} is dispatched.}{42}{lstlisting.11}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra }, or forgotten $.
-<recently read> \egroup 
-                        
-l.11 ...E_TEXT} is dispatched.}{42}{lstlisting.11}
-                                                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-<argument> ...LCULATOR_WRITE_TEXT} is dispatched.}
-                                                  
-l.11 ...E_TEXT} is dispatched.}{42}{lstlisting.11}
-                                                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-\@dottedtocline ...\nobreak \hskip -\leftskip {#4}
-                                                  \nobreak \leaders \hbox {$...
-l.11 ...E_TEXT} is dispatched.}{42}{lstlisting.11}
-                                                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.11 ...E_TEXT} is dispatched.}{42}{lstlisting.11}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.12 ...KSPACE} is dispatched.}{42}{lstlisting.12}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra }, or forgotten $.
-<recently read> \egroup 
-                        
-l.12 ...KSPACE} is dispatched.}{42}{lstlisting.12}
-                                                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-<argument> ...ALCULATOR_BACKSPACE} is dispatched.}
-                                                  
-l.12 ...KSPACE} is dispatched.}{42}{lstlisting.12}
-                                                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-\@dottedtocline ...\nobreak \hskip -\leftskip {#4}
-                                                  \nobreak \leaders \hbox {$...
-l.12 ...KSPACE} is dispatched.}{42}{lstlisting.12}
-                                                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.12 ...KSPACE} is dispatched.}{42}{lstlisting.12}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.13 ...R_TEXT} is dispatched.}{42}{lstlisting.13}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra }, or forgotten $.
-<recently read> \egroup 
-                        
-l.13 ...R_TEXT} is dispatched.}{42}{lstlisting.13}
-                                                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-<argument> ...LCULATOR_CLEAR_TEXT} is dispatched.}
-                                                  
-l.13 ...R_TEXT} is dispatched.}{42}{lstlisting.13}
-                                                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-\@dottedtocline ...\nobreak \hskip -\leftskip {#4}
-                                                  \nobreak \leaders \hbox {$...
-l.13 ...R_TEXT} is dispatched.}{42}{lstlisting.13}
-                                                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.13 ...R_TEXT} is dispatched.}{42}{lstlisting.13}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Overfull \hbox (169.39784pt too wide) in paragraph at lines 13--13
- [][] []\T1/lmr/m/n/12 Clear the \T1/lmtt/m/n/12 state.calculator.displayText \
-T1/lmr/m/n/12 when ac-tion of type \T1/lmtt/m/n/12 CALCULATOR$[]\OML/lmm/m/it/1
-2 LEAR[]EXTisdispatched: [][]$  
- []
-
-[14]
-! Missing $ inserted.
-<inserted text> 
-                $
-l.28 ...UATION} is dispatched.}{50}{lstlisting.28}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra }, or forgotten $.
-<recently read> \egroup 
-                        
-l.28 ...UATION} is dispatched.}{50}{lstlisting.28}
-                                                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-<argument> ...NCTION_SET_EQUATION} is dispatched.}
-                                                  
-l.28 ...UATION} is dispatched.}{50}{lstlisting.28}
-                                                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-\@dottedtocline ...\nobreak \hskip -\leftskip {#4}
-                                                  \nobreak \leaders \hbox {$...
-l.28 ...UATION} is dispatched.}{50}{lstlisting.28}
-                                                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.28 ...UATION} is dispatched.}{50}{lstlisting.28}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Overfull \hbox (174.43646pt too wide) in paragraph at lines 28--28
- \T1/lmr/m/n/12 new one from ac-tion pay-load when ac-tion of type \T1/lmtt/m/n
-/12 PARAMETRIC$[]\OML/lmm/m/it/12 UNCTION[]ET[]QUATIONisdispatched: [][]$  
- []
-
-)
+[11] [12] (./tukethesis.lol [13])
 \tf@lol=\write7
 \openout7 = `tukethesis.lol'.
 
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.344 \lstlistoflistings
-                        
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.344 \lstlistoflistings
-                        
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.344 \lstlistoflistings
-                        
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.344 \lstlistoflistings
-                        
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.344 \lstlistoflistings
-                        
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.344 \lstlistoflistings
-                        
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.344 \lstlistoflistings
-                        
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.344 \lstlistoflistings
-                        
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.344 \lstlistoflistings
-                        
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.344 \lstlistoflistings
-                        
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.344 \lstlistoflistings
-                        
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.344 \lstlistoflistings
-                        
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.368 \end{description}
-                       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[15]
+ [14]
 \openout2 = `introduction.aux'.
 
- (./introduction.tex)pdfTeX warning (ext4): destination with the same identifie
-r (name{page.1}) has been already used, duplicate ignored
+ (./introduction.texpdfTeX warning (ext4): destination with the same identifier
+ (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.374 \include{introduction}
-                             [1
+l.20 F
+      indings and future project roadmap is discussed in "Conclusion" section.
+[1
 
-]
+])pdfTeX warning (ext4): destination with the same identifier (name{page.2}) ha
+s been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.248 \include{introduction}
+                             [2]
 \openout2 = `problemexpression.aux'.
 
  (./problemexpression.tex
@@ -1278,208 +929,237 @@ File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 7.
-pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.11 \item{
-           After selecting the development tools we need to prepare the deve...
-[2
+           After selecting the~development tools we need to prepare the~deve...
+[3
 
 
-])pdfTeX warning (ext4): destination with the same identifier (name{page.3}) ha
+])pdfTeX warning (ext4): destination with the same identifier (name{page.4}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.376 \include{problemexpression}
-                                  [3]
-\openout2 = `theoreticalanalysis.aux'.
-
- (./theoreticalanalysis.tex)pdfTeX warning (ext4): destination with the same id
-entifier (name{page.4}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.378 \include{theoreticalanalysis}
-                                    [4
-
-
-]
+l.250 \include{problemexpression}
+                                  [4]
 \openout2 = `currentstate.aux'.
 
- (./currentstate.texpdfTeX warning (ext4): destination with the same identifier
- (name{page.5}) has been already used, duplicate ignored
+ (./currentstate.tex
+(/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstlang2.sty
+File: lstlang2.sty 2015/06/04 1.6 listings language file
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstlang3.sty
+File: lstlang3.sty 2015/06/04 1.6 listings language file
+)
+
+! Package Listings Error: Couldn't load requested language.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.36 }
+      
+The following languages weren't loadable:
+    ,html5$
+This may cause errors in the sequel.
+
+
+! Package Listings Error: language html5 undefined.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.36 }
+      
+The language is not loadable. Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.14 \section
-             {Technologies and tools for development} [5
+l.45 \newpage
+              [5
 
 
-]
-! Misplaced alignment tab character &.
-l.16 ...he if statement, the while loop, and the &
-                                                  & operator. The similarity...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
+] <figures/bodyvr.jpg, id=652, 2569.6pt x 1445.4pt>
+File: figures/bodyvr.jpg Graphic file (type jpg)
 
-! Misplaced alignment tab character &.
-l.16 ...e if statement, the while loop, and the &&
-                                                   operator. The similarity ...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
+<use figures/bodyvr.jpg>
+Package pdftex.def Info: figures/bodyvr.jpg used on input line 51.
+(pdftex.def)             Requested size: 277.41176pt x 156.03912pt.
 
-! Undefined control sequence.
-l.16 ...ent from inheritance in C++ and Java.\city
-                                                  {flanagan}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+<figures/job-simulator.jpg, id=657, 1927.2pt x 1084.05pt>
+File: figures/job-simulator.jpg Graphic file (type jpg)
 
-! Undefined control sequence.
-l.18 ... be used on server-side with Node.js.\city
-                                                  {flanagan}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
+<use figures/job-simulator.jpg>
+Package pdftex.def Info: figures/job-simulator.jpg used on input line 60.
+(pdftex.def)             Requested size: 277.41176pt x 156.0336pt.
 pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.21 
-      [6]pdfTeX warning (ext4): destination with the same identifier (name{page
-.7}) has been already used, duplicate ignored
+l.67 
+      [6 <./figures/bodyvr.jpg> <./figures/job-simulator.jpg>]
+<figures/calcflow.jpg, id=666, 1346.53062pt x 1040.38687pt>
+File: figures/calcflow.jpg Graphic file (type jpg)
+
+<use figures/calcflow.jpg>
+Package pdftex.def Info: figures/calcflow.jpg used on input line 70.
+(pdftex.def)             Requested size: 341.43436pt x 263.81082pt.
+pdfTeX warning (ext4): destination with the same identifier (name{page.7}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.30 
-      [7]
+l.79 
+      [7 <./figures/calcflow.jpg>]
+! Misplaced alignment tab character &.
+l.88 ...he~if statement, the~while loop, and the~&
+                                                  & operator. the~similarity...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
-! Package Listings Error: Couldn't load requested style.
+! Misplaced alignment tab character &.
+l.88 ...e~if statement, the~while loop, and the~&&
+                                                   operator. the~similarity ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
-See the Listings package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.39 ...style=\tiny,style=myCustomJavaScriptStyle}
-                                                  
-The following styles weren't loadable:
-    ,mycustomjavascriptstyle$
-This may cause errors in the sequel.
-
-
-! Package Listings Error: style mycustomjavascriptstyle undefined.
-
-See the Listings package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.39 ...style=\tiny,style=myCustomJavaScriptStyle}
-                                                  
-The style is not loadable. Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 46.
 pdfTeX warning (ext4): destination with the same identifier (name{page.8}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.56 
+l.89 
       [8]pdfTeX warning (ext4): destination with the same identifier (name{page
 .9}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.74 
+l.96 
       [9]pdfTeX warning (ext4): destination with the same identifier (name{page
 .10}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.107 T
-       hese components are curated and collected into the A-Frame Registry. ...
-[10] <figures/aframe-inspector.png, id=677, 627.34375pt x 327.2225pt>
-File: figures/aframe-inspector.png Graphic file (type png)
-
-<use figures/aframe-inspector.png>
-Package pdftex.def Info: figures/aframe-inspector.png used on input line 114.
-(pdftex.def)             Requested size: 384.10959pt x 200.35938pt.
-pdfTeX warning (ext4): destination with the same identifier (name{page.11}) has
+l.106 \subsection
+                 {A-Frame} [10]pdfTeX warning (ext4): destination with the same
+ identifier (name{page.11}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.127 
+       [11]
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 132.
+pdfTeX warning (ext4): destination with the same identifier (name{page.12}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.121 
-       [11]pdfTeX warning (ext4): destination with the same identifier (name{pa
-ge.12}) has been already used, duplicate ignored
+l.143 
+       [12]pdfTeX warning (ext4): destination with the same identifier (name{pa
+ge.13}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.131 \item{
-            Operating system: Windows¬Æ 7 SP1, Windows¬Æ 8.1 or later, Windo...
-[12 <./figures/aframe-inspector.png>]pdfTeX warning (ext4): destination with th
-e same identifier (name{page.13}) has been already used, duplicate ignored
+l.169 \newpage
+               [13]
+<figures/aframe-inspector.png, id=765, 627.34375pt x 327.2225pt>
+File: figures/aframe-inspector.png Graphic file (type png)
+
+<use figures/aframe-inspector.png>
+Package pdftex.def Info: figures/aframe-inspector.png used on input line 186.
+(pdftex.def)             Requested size: 384.10959pt x 200.35938pt.
+pdfTeX warning (ext4): destination with the same identifier (name{page.14}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.142 
-       [13]pdfTeX warning (ext4): destination with the same identifier (name{pa
-ge.14}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.151 
-       [14]
-<figures/flux-simple-f8-diagram.png, id=707, 1304.875pt x 287.0725pt>
+l.189 \end{figure}
+                   [14] [15 <./figures/aframe-inspector.png>] [16]
+<figures/flux-simple-f8-diagram.png, id=803, 1304.875pt x 287.0725pt>
 File: figures/flux-simple-f8-diagram.png Graphic file (type png)
 
 <use figures/flux-simple-f8-diagram.png>
 Package pdftex.def Info: figures/flux-simple-f8-diagram.png used on input line 
-154.
+214.
 (pdftex.def)             Requested size: 426.79134pt x 93.89317pt.
-
-<figures/flux-simple-f8-diagram-explained.png, id=708, 1304.875pt x 710.655pt>
+ [17]
+<figures/flux-simple-f8-diagram-explained.png, id=816, 1304.875pt x 710.655pt>
 File: figures/flux-simple-f8-diagram-explained.png Graphic file (type png)
 
 <use figures/flux-simple-f8-diagram-explained.png>
 Package pdftex.def Info: figures/flux-simple-f8-diagram-explained.png used on i
-nput line 165.
-(pdftex.def)             Requested size: 426.79134pt x 232.43488pt.
-pdfTeX warning (ext4): destination with the same identifier (name{page.15}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.173 
-       [15 <./figures/flux-simple-f8-diagram.png (PNG copy)>] [16 <./figures/fl
-ux-simple-f8-diagram-explained.png (PNG copy)>] [17] [18]
-<figures/webpack.pdf, id=738, 1021.8175pt x 439.6425pt>
+nput line 225.
+(pdftex.def)             Requested size: 384.10959pt x 209.18597pt.
+ [18 <./figures/flux-simple-f8-diagram.png (PNG copy)> <./figures/flux-simple-f
+8-diagram-explained.png (PNG copy)>] [19] [20] [21] <figures/webpack.pdf, id=85
+6, 1021.8175pt x 439.6425pt>
 File: figures/webpack.pdf Graphic file (type pdf)
 
 <use figures/webpack.pdf>
-Package pdftex.def Info: figures/webpack.pdf used on input line 216.
+Package pdftex.def Info: figures/webpack.pdf used on input line 270.
 (pdftex.def)             Requested size: 384.10959pt x 165.26132pt.
-) [19 <./figures/webpack.pdf>]
+) [22 <./figures/webpack.pdf>]
 \openout2 = `design.aux'.
 
- (./design.tex) [20
+ (./design.tex [23
 
 
 ]
+Overfull \hbox (40.28966pt too wide) in paragraph at lines 21--22
+[]\T1/lmr/m/n/12 Ability to lever-age VR hand con-trollers' in-ter-ac-tions to 
+grab and scale the parametrized
+ []
+
+[24]) [25]
 \openout2 = `implementation.aux'.
 
-
-(./implementation.tex
+ (./implementation.tex
 (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-) [21
+(/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstlang2.sty
+File: lstlang2.sty 2015/06/04 1.6 listings language file
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstlang3.sty
+File: lstlang3.sty 2015/06/04 1.6 listings language file
+)
+
+! Package Listings Error: Couldn't load requested language.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.37 }
+      
+The following languages weren't loadable:
+    ,html5$
+This may cause errors in the sequel.
+
+
+! Package Listings Error: language html5 undefined.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.37 }
+      
+The language is not loadable. Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[26
 
 
 ]
@@ -1537,1158 +1217,308 @@ l.77   "author": "Michal Tak√°ƒç"
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
-<figures/npm-aframe.png, id=773, 584.1825pt x 498.86375pt>
+<figures/npm-aframe.png, id=900, 584.1825pt x 498.86375pt>
 File: figures/npm-aframe.png Graphic file (type png)
 
 <use figures/npm-aframe.png>
 Package pdftex.def Info: figures/npm-aframe.png used on input line 91.
 (pdftex.def)             Requested size: 384.10959pt x 328.01794pt.
- [22] [23 <./figures/npm-aframe.png>] [24]
-<figures/folder-structure.png, id=834, 263.98625pt x 584.1825pt>
+ [27] [28 <./figures/npm-aframe.png>] [29]
+<figures/folder-structure.png, id=961, 263.98625pt x 584.1825pt>
 File: figures/folder-structure.png Graphic file (type png)
 
 <use figures/folder-structure.png>
 Package pdftex.def Info: figures/folder-structure.png used on input line 146.
 (pdftex.def)             Requested size: 128.0387pt x 283.33708pt.
- [25 <./figures/folder-structure.png>]
-LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 159.
-
-<figures/npm-start.png, id=840, 828.09375pt x 320.19624pt>
+ [30 <./figures/folder-structure.png>]
+<figures/npm-start.png, id=967, 828.09375pt x 320.19624pt>
 File: figures/npm-start.png Graphic file (type png)
 
 <use figures/npm-start.png>
-Package pdftex.def Info: figures/npm-start.png used on input line 180.
-(pdftex.def)             Requested size: 256.0774pt x 99.0155pt.
- [26] [27 <./figures/npm-start.png>] [28] [29]
-Overfull \hbox (90.19833pt too wide) in paragraph at lines 303--304
-[]\T1/lmr/m/n/12 It's called a re-ducer be-cause it's the type of func-tion you
- would pass to Ar-ray.prototype.reduce(reducer,
- []
+Package pdftex.def Info: figures/npm-start.png used on input line 160.
+(pdftex.def)             Requested size: 384.10959pt x 148.52327pt.
+ [31 <./figures/npm-start.png>] [32]
+! Undefined control sequence.
+l.200 ...the function returned by \textttsubscribe
+                                                  (listener)}.}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-[30] [31] [32]
-Overfull \hbox (12.00056pt too wide) in paragraph at lines 432--433
-[]\T1/lmr/m/n/12 Handles un-reg-is-ter-ing of lis-ten-ers via the func-tion re-
-turned by sub-scribe(listener). 
- []
+! Extra }, or forgotten \endgroup.
+l.200 ...returned by \textttsubscribe(listener)}.}
+                                                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
 [33] [34]
-! Missing $ inserted.
-<inserted text> 
-                $
-l.494 ...lopment and production according to NODE_
-                                                  ENV variable used for dist...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.495 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Overfull \hbox (352.45137pt too wide) in paragraph at lines 494--495
-\T1/lmr/m/n/12 tional switch-ing be-tween Store for de-vel-op-ment and pro-duc-
-tion ac-cord-ing to NODE$[]\OML/lmm/m/it/12 NVvariableusedfordistinguishingbetw
-eendifferentenvironments \OT1/lmr/m/n/12 :$ 
+Overfull \hbox (1.8737pt too wide) in paragraph at lines 227--228
+\T1/lmr/m/n/12 im-ple-ment-ing the \T1/lmtt/m/n/12 <a-scene> \T1/lmr/m/n/12 pri
+m-i-tive from A-Frame API. It cre-ates \T1/lmtt/m/n/12 THREE.Scene()
  []
 
-[35] [36] [37]
-Overfull \hbox (7.19598pt too wide) in paragraph at lines 590--591
-\T1/lmr/m/n/12 with \T1/lmtt/m/n/12 geometry.radius \T1/lmr/m/n/12 of 12 me-ter
-s and \T1/lmtt/m/n/12 floor.jpg \T1/lmr/m/n/12 tex-ture is added to \T1/lmtt/m/
-n/12 material.src
- []
-
-
-Overfull \hbox (4.15054pt too wide) in paragraph at lines 590--591
-\T1/lmr/m/n/12 degrees around the X-axis. To ac-cept light from Lights com-po-n
-ent, \T1/lmtt/m/n/12 material.shader
- []
-
-[38]
-Overfull \hbox (31.59154pt too wide) in paragraph at lines 612--613
-\T1/lmtt/m/n/12 intensity \T1/lmr/m/n/12 prop-erty. \T1/lmtt/m/n/12 Lights \T1/
-lmr/m/n/12 com-po-nent is de-fined in \T1/lmtt/m/n/12 src/components/Lights/ind
-ex.js\T1/lmr/m/n/12 . 
- []
-
-pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.-28
-.10}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.624     </E
-             ntity> [39] [40]
-Overfull \hbox (15.85414pt too wide) in paragraph at lines 668--669
-\T1/lmr/m/n/12 Calculator com-po-nent's ini-tial state is de-fined in \T1/lmtt/
-m/n/12 src/reducers/calculator/index.js
- []
-
-
-Overfull \hbox (65.23174pt too wide) in paragraph at lines 677--678
-\T1/lmr/m/n/12 Reducer func-tion for \T1/lmtt/m/n/12 Calculator \T1/lmr/m/n/12 
-com-po-nent is de-fined in \T1/lmtt/m/n/12 src/reducers/calculator/index.js\T1/
-lmr/m/n/12 .
- []
-
-[41]
-! Missing $ inserted.
-<inserted text> 
-                $
-l.689 \end{lstlisting}
-                      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 689.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 689.
-! Extra }, or forgotten $.
-<recently read> \egroup 
-                        
-l.689 \end{lstlisting}
-                      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.689 \end{lstlisting}
-                      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.689 \end{lstlisting}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.689 \end{lstlisting}
-                      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra }, or forgotten $.
-<recently read> \egroup 
-                        
-l.689 \end{lstlisting}
-                      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.689 \end{lstlisting}
-                      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.689 \end{lstlisting}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.701 \end{lstlisting}
-                      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra }, or forgotten $.
-<recently read> \egroup 
-                        
-l.701 \end{lstlisting}
-                      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.701 \end{lstlisting}
-                      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.701 \end{lstlisting}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.701 \end{lstlisting}
-                      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra }, or forgotten $.
-<recently read> \egroup 
-                        
-l.701 \end{lstlisting}
-                      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.701 \end{lstlisting}
-                      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.701 \end{lstlisting}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.713 \end{lstlisting}
-                      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra }, or forgotten $.
-<recently read> \egroup 
-                        
-l.713 \end{lstlisting}
-                      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.713 \end{lstlisting}
-                      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.713 \end{lstlisting}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.713 \end{lstlisting}
-                      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra }, or forgotten $.
-<recently read> \egroup 
-                        
-l.713 \end{lstlisting}
-                      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.713 \end{lstlisting}
-                      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-[42]
-! Missing } inserted.
-<inserted text> 
-                }
-l.713 \end{lstlisting}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-[43]pdfTeX warning (ext4): destination with the same identifier (name{lstnumber
-.-28.12}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.756     </E
-             ntity> [44] [45]
-<figures/calculator.png, id=1336, 612.78937pt x 502.87875pt>
+[35] [36] [37] [38] [39] [40] [41] [42] [43] [44]
+<figures/calculator.png, id=1228, 612.78937pt x 502.87875pt>
 File: figures/calculator.png Graphic file (type png)
 
 <use figures/calculator.png>
-Package pdftex.def Info: figures/calculator.png used on input line 830.
-(pdftex.def)             Requested size: 256.0774pt x 210.14871pt.
- [46] [47 <./figures/calculator.png>] [48]
-! Missing $ inserted.
-<inserted text> 
-                $
-l.906 ...bout type of \texttt{PARAMETRIC_FUNCTION}
-                                                   action being dispatched a...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra }, or forgotten $.
-<recently read> \egroup 
-                        
-l.906 ...bout type of \texttt{PARAMETRIC_FUNCTION}
-                                                   action being dispatched a...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.907 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Overfull \hbox (448.16707pt too wide) in paragraph at lines 906--907
-\T1/lmr/m/n/12 for-ma-tion about type of \T1/lmtt/m/n/12 PARAMETRIC$[]\OML/lmm/
-m/it/12 UNCTIONactionbeingdispatchedand; ifneeded; alsothedatawewanttosendtoRed
-uxstore:Theyaredefinedin[]$ 
- []
-
-
-Overfull \hbox (196.88397pt too wide) in paragraph at lines 916--917
-\T1/lmtt/m/n/12 ParametricFunction component's initial state is defined in src/
-reducers/parametrizedFunction/index.js
- []
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.925 ...according to \texttt{PARAMETRIC_FUNCTION}
-                                                   actions. Possible \texttt...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra }, or forgotten $.
-<recently read> \egroup 
-                        
-l.925 ...according to \texttt{PARAMETRIC_FUNCTION}
-                                                   actions. Possible \texttt...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.926 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Overfull \hbox (221.58398pt too wide) in paragraph at lines 925--926
-\T1/lmtt/m/n/12 Reducer function for ParametricFunction component is defined in
- src/reducers/parametricFunction/index.js.
- []
-
-
-Overfull \hbox (23.98389pt too wide) in paragraph at lines 925--926
-\T1/lmtt/m/n/12 From this file it's exported as a default function that takes s
-tate (with
- []
-
-
-Overfull \hbox (17.80888pt too wide) in paragraph at lines 925--926
-\T1/lmtt/m/n/12 initialState as a default value) and action as its arguments an
-d returns
- []
-
-
-Overfull \hbox (444.30673pt too wide) in paragraph at lines 925--926
-\T1/lmtt/m/n/12 new state according to PARAMETRIC$[]\OML/lmm/m/it/12 UNCTIONact
-ions:Possible[]areconditionallycheckedwithJavaScript[]s[]statementforabettercod
-ereadability:$ 
- []
-
-[49]
-! Missing $ inserted.
-<inserted text> 
-                $
-l.937 \end{lstlisting}
-                      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra }, or forgotten $.
-<recently read> \egroup 
-                        
-l.937 \end{lstlisting}
-                      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.937 \end{lstlisting}
-                      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.937 \end{lstlisting}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.937 \end{lstlisting}
-                      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra }, or forgotten $.
-<recently read> \egroup 
-                        
-l.937 \end{lstlisting}
-                      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.937 \end{lstlisting}
-                      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.937 \end{lstlisting}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-Overfull \hbox (54.8589pt too wide) in paragraph at lines 940--941
-\T1/lmtt/m/n/12 State and actions that ParametricFunction component needs to fu
-nction properly
- []
-
-
-Overfull \hbox (11.63388pt too wide) in paragraph at lines 940--941
-\T1/lmtt/m/n/12 are mapped to properties in ParametricFunction container - high
-er-order
- []
-
-
-Overfull \hbox (11.63388pt too wide) in paragraph at lines 940--941
-\T1/lmtt/m/n/12 component. Code for ParametricFunction higher-order component c
-reation
- []
-
-[50]
-Overfull \hbox (17.80888pt too wide) in paragraph at lines 964--965
-\T1/lmtt/m/n/12 Presentational ParametricFunction component is implementing the
- geometry
- []
-
-
-Overfull \hbox (48.6839pt too wide) in paragraph at lines 964--965
-\T1/lmtt/m/n/12 and material from A-Frame API. It's shape is determined by geom
-etry.primitive
- []
-
-
-Overfull \hbox (5.45187pt too wide) in paragraph at lines 964--965
-\T1/lmtt/m/n/12 which is set to 'box' with width of 0.88 meters, height of 0.65
- meters
- []
-
-
-Overfull \hbox (54.8589pt too wide) in paragraph at lines 964--965
-\T1/lmtt/m/n/12 and depth of 0.01 meters. By default it's not moveable to ensur
-e its position
- []
-
-
-Overfull \hbox (42.5089pt too wide) in paragraph at lines 964--965
-\T1/lmtt/m/n/12 central to the MathworldVR experience. Properties passed into t
-he component
- []
-
-
-Overfull \hbox (5.45888pt too wide) in paragraph at lines 964--965
-\T1/lmtt/m/n/12 as function attributes includes state and dispatchable action t
-hat was
- []
-
-
-Overfull \hbox (221.58398pt too wide) in paragraph at lines 964--965
-\T1/lmtt/m/n/12 mapped in it's higher-order component. Calculator code is defin
-ed in src/components/Calculator/index.js.
- []
-
-
-Overfull \hbox (5.45888pt too wide) in paragraph at lines 964--965
-\T1/lmtt/m/n/12 Code preview displayed here doesn't include the CalcButton comp
-onents,
- []
-
-
-Overfull \hbox (36.3339pt too wide) in paragraph at lines 964--965
-\T1/lmtt/m/n/12 but they're utilizing the writeText, backspace and clearText ac
-tions. They
- []
-
-[51]pdfTeX warning (ext4): destination with the same identifier (name{lstnumber
-.-29.17}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.983     />
-            
-Overfull \hbox (48.6839pt too wide) in paragraph at lines 990--991
-\T1/lmtt/m/n/12 We will register the datgui A-Frame component first. Inside the
- init method,
- []
-
-
-Overfull \hbox (23.98389pt too wide) in paragraph at lines 990--991
-\T1/lmtt/m/n/12 we're creating the dat.guiVR instance and injecting it into the
- component
- []
-
-
-Overfull \hbox (17.80888pt too wide) in paragraph at lines 998--999
-[]\T1/lmtt/m/n/12 To allow VR hand controllers interactions, we'll create bindI
-nput method
- []
-
-
-Overfull \hbox (23.98389pt too wide) in paragraph at lines 998--999
-\T1/lmtt/m/n/12 that will create event listeners for triggerdown, triggerup, gr
-ipdown and
- []
-
-[52]
-Overfull \hbox (17.80888pt too wide) in paragraph at lines 1017--1018
-[]\T1/lmtt/m/n/12 Datgui component doesn't know about the VR hand controllers y
-et, thus we
- []
-
-<figures/function_settings.png, id=1493, 554.07pt x 554.07pt>
+Package pdftex.def Info: figures/calculator.png used on input line 500.
+(pdftex.def)             Requested size: 298.75262pt x 245.16966pt.
+ [45 <./figures/calculator.png>] [46] [47] [48]
+[49] [50] [51] [52] [53] [54] [55] [56] [57]
+<figures/function_settings.png, id=1470, 554.07pt x 554.07pt>
 File: figures/function_settings.png Graphic file (type png)
 
 <use figures/function_settings.png>
-Package pdftex.def Info: figures/function_settings.png used on input line 1040.
+Package pdftex.def Info: figures/function_settings.png used on input line 857.
+(pdftex.def)             Requested size: 341.43436pt x 341.43161pt.
+ [58]
+Overfull \hbox (2.68471pt too wide) in paragraph at lines 864--865
+\T1/lmr/m/n/12 by im-port-ing the \T1/lmtt/m/n/12 aframe-super-hands-component 
+\T1/lmr/m/n/12 in Math-worldVR's \T1/lmtt/m/n/12 VRScene \T1/lmr/m/n/12 com-
+ []
 
-(pdftex.def)             Requested size: 256.0774pt x 256.07582pt.
- [53] [54 <./figures/function_settings.png>] [55] <figures/grab.png, id=1582, 7
-14.41907pt x 709.90219pt>
+[59 <./figures/function_settings.png>]
+<figures/grab.png, id=1495, 714.41907pt x 709.90219pt>
 File: figures/grab.png Graphic file (type png)
+ <use figures/grab.png>
+Package pdftex.def Info: figures/grab.png used on input line 878.
+(pdftex.def)             Requested size: 298.75262pt x 296.86784pt.
 
-<use figures/grab.png>
-Package pdftex.def Info: figures/grab.png used on input line 1126.
-(pdftex.def)             Requested size: 256.0774pt x 254.4597pt.
-
-<figures/scaling.png, id=1583, 1034.36438pt x 700.86844pt>
+<figures/scaling.png, id=1496, 1034.36438pt x 700.86844pt>
 File: figures/scaling.png Graphic file (type png)
 
 <use figures/scaling.png>
-Package pdftex.def Info: figures/scaling.png used on input line 1135.
-(pdftex.def)             Requested size: 256.0774pt x 173.51627pt.
- [56 <./figures/grab.png>]) [57 <./figures/scaling.png>]
+Package pdftex.def Info: figures/scaling.png used on input line 885.
+(pdftex.def)             Requested size: 298.75262pt x 202.42317pt.
+ [60 <./figures/grab.png>] [61 <./figures/scaling.png>] [62] <figures/main.png,
+ id=1536, 1074.26344pt x 693.34032pt>
+File: figures/main.png Graphic file (type png)
+
+<use figures/main.png>
+Package pdftex.def Info: figures/main.png used on input line 931.
+(pdftex.def)             Requested size: 426.79134pt x 275.44806pt.
+) [63 <./figures/main.png>]
 \openout2 = `conclusion.aux'.
 
- (./conclusion.tex)
-Overfull \hbox (30.15889pt too wide) in paragraph at lines 3--386
-\T1/lmtt/m/n/12 T·to £as¥ z·vere£nej pr·ce je povinn·. Autor uvedie zhodnotenie
- rie≤enia.
- []
+ (./conclusion.tex [64
 
 
-Overfull \hbox (48.6839pt too wide) in paragraph at lines 3--386
-\T1/lmtt/m/n/12 Uvedie v˝hody, nev˝hody rie≤enia, pou∫itie v˝sledkov, §al≤ie mo
-∫nosti a pod.,
- []
-
-
-Overfull \hbox (30.15889pt too wide) in paragraph at lines 3--386
-\T1/lmtt/m/n/12 prÌpadne na£rtne in˝ spÙsob rie≤enia ˙loh, resp. uvedie, pre£o 
-postupoval
- []
-
-[58
-
-
-]
+])
+[65]
 \openout2 = `bibliography.aux'.
 
- (./bibliography.tex
-Underfull \hbox (badness 10000) in paragraph at lines 6--7
-[]\T1/lmtt/m/n/12 BECK, K. 2003. \T1/lmtt/m/it/12 Test-driven Development: By E
-xample. \T1/lmtt/m/n/12 USA:
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--10
-[]\T1/lmtt/m/n/12 BADRUL, K. 2011. \T1/lmtt/m/it/12 User Interface Design for V
-irtual Environments:
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--10
-\T1/lmtt/m/it/12 Challenges and Advances. \T1/lmtt/m/n/12 USA: IGI Global, 2011
-. 375 s. ISBN
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 12--13
-[]\T1/lmtt/m/n/12 FLANAGAN, D. 2006. \T1/lmtt/m/it/12 JavaScript: The Definitiv
-e Guide (5th edition).
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 15--16
-[]\T1/lmtt/m/n/12 NARAYAN, P. 2015. \T1/lmtt/m/it/12 Learning ECMAScript 6. \T1
-/lmtt/m/n/12 USA: Packt Publishing,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 18--19
-[]\T1/lmtt/m/n/12 LOEFFLER, C. 1995. \T1/lmtt/m/it/12 Distributed Virtual Reali
-ty: Applications for
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 18--19
-\T1/lmtt/m/it/12 Education, Entertainment and Industry. []$\T1/lmtt/m/n/12 http
- : / / www . wiumlie . no / 1993 /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 21--22
-[]\T1/lmtt/m/n/12 KAUFMANN, H. 2011. \T1/lmtt/m/it/12 Virtual Environments for 
-Mathematics and Geometry
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 21--22
-\T1/lmtt/m/it/12 Education. \T1/lmtt/m/n/12 In: Themes In Science and Technolog
-y Education.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 21--22
-\T1/lmtt/m/n/12 Vienna : Klidarithmos Computer Books, 2011, Special Issue, pp.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--28
-[]\T1/lmtt/m/it/12 A-Frame Introduction [online]. Available on internet: []$\T1
-/lmtt/m/n/12 https :
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 30--31
-[]\T1/lmtt/m/n/12 GACKENHEIMER, C. 2015. \T1/lmtt/m/it/12 Introduction to React
-. \T1/lmtt/m/n/12 USA: Apress, 2015
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 33--34
-[]\T1/lmtt/m/n/12 FACEBOOK, Inc. 2015. \T1/lmtt/m/it/12 Flux - In Depth Overvie
-w [online]. Available on
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 33--34
-\T1/lmtt/m/it/12 internet: []$\T1/lmtt/m/n/12 https : / / facebook . github . i
-o / flux / docs / in-[]depth-[]overview .
- []
-
-[59
+ (./bibliography.tex [66
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 36--37
-[]\T1/lmtt/m/it/12 Redux [online]. Available on internet: []$\T1/lmtt/m/n/12 ht
-tps : / / aframe . io / docs / 0 . 5 .
+Underfull \hbox (badness 5696) in paragraph at lines 42--43
+[]\T1/lmr/m/it/12 Job Sim-u-la-tor rev-enue. \T1/lmr/m/n/12 [On-line]. Re-triev
+ed April 17, 2017 from []$\T1/lmtt/m/n/12 h t tp :
  []
 
-) [60]
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--43
+\T1/lmtt/m/n/12 / / w w w . t h e s i x t h a x i s . c o m /2017 / 01 / 09 / j
+ o b-[] s i m u l a t o r s-[]3-[] m i l l i o n -[] i n-[] s
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 51--52
+\T1/lmtt/m/n/12 a m s t a t i c . c o m / s t e a m / a p p s / 451980 / s s _ 
+e 3 e 4 e 6850 f 6 b 76 e 1974 a a d 3 f 65 e a4 a 0 e
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--55
+\T1/lmtt/m/n/12 a m s t a t i c . c o m / s t e a m / a p p s / 448280 / s s _ 
+f f7151 c a b 14752 f 2 b 6501 c 31 c 3 c 79235 b
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 57--58
+\T1/lmtt/m/n/12 s t a t i c . c o m / s t e a m / a p p s / 547280 / s s _072 b
+ 60 f c7903197 f f c b747600 b 90 a 3 c c d
+ []
+
+) [67]
 \openout2 = `appendices.aux'.
 
- (./appendices.tex) [61
+ (./appendices.tex) [68
 
 
 ]
 \openout2 = `appendixa.aux'.
 
  (./appendixa.tex
-Overfull \hbox (11.63388pt too wide) in paragraph at lines 7--16
-\T1/lmtt/m/n/12 T·to £as¥ z·vere£nej pr·ce je povinn· a obsahuje zoznam v≤etk˝c
-h prÌloh
+Overfull \hbox (28.5557pt too wide) in paragraph at lines 19--20
+\T1/lmtt/m/n/12 t p s : / / d l 4 . h t c . c o m / W e b _ m a t e r i a l s /
+ M a n u a l / V i v e / V i v e _ U s e r _ G u i d e . p d f$[] \T1/lmr/m/n/1
+2 or by search-
  []
 
-
-Overfull \hbox (17.80888pt too wide) in paragraph at lines 7--16
-\T1/lmtt/m/n/12 vr·tane elektronick˝ch nosi£ov. N·zvy prÌloh v zozname musia by
-¥ zhodnÈ
- []
+[69
 
 
-Overfull \hbox (5.45888pt too wide) in paragraph at lines 7--16
-\T1/lmtt/m/n/12 s n·zvami uveden˝mi na prÌslu≤n˝ch prÌloh·ch. Tla£enÈ prÌlohy m
-aj˙ na
- []
+] <figures/steam.jpg, id=1610, 1445.4pt x 796.9775pt>
+File: figures/steam.jpg Graphic file (type jpg)
 
+<use figures/steam.jpg>
+Package pdftex.def Info: figures/steam.jpg used on input line 39.
+(pdftex.def)             Requested size: 341.43436pt x 188.2626pt.
+ [70 <./figures/steam.jpg>]
+<figures/steam-vr.png, id=1617, 568.1225pt x 265.99374pt>
+File: figures/steam-vr.png Graphic file (type png)
 
-Overfull \hbox (11.63388pt too wide) in paragraph at lines 7--16
-\T1/lmtt/m/n/12 prvej strane identifika£nÈ ˙daje -- inform·cie zhodnÈ s titulno
-u stranou
- []
+<use figures/steam-vr.png>
+Package pdftex.def Info: figures/steam-vr.png used on input line 50.
+(pdftex.def)             Requested size: 341.43436pt x 159.86534pt.
+ [71 <./figures/steam-vr.png>]
+<figures/room-scale-setup.jpg, id=1624, 776.14969pt x 397.485pt>
+File: figures/room-scale-setup.jpg Graphic file (type jpg)
 
+<use figures/room-scale-setup.jpg>
+Package pdftex.def Info: figures/room-scale-setup.jpg used on input line 61.
+(pdftex.def)             Requested size: 384.10959pt x 196.71625pt.
 
-Overfull \hbox (30.15889pt too wide) in paragraph at lines 7--16
-\T1/lmtt/m/n/12 z·vere£nej pr·ce doplnenÈ o n·zov prÌslu≤nej prÌlohy. Identifik
-a£nÈ ˙daje
- []
+! Illegal parameter number in definition of \reserved@a.
+<to be read again> 
+                   e
+l.69 ...nter \texttt{chrome://flags/#enable-webvr}
+                                                   in the URL bar) and the "...
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
 
+! You can't use `macro parameter character #' in horizontal mode.
+<argument> chrome://flags/##
+                            enable-webvr
+l.69 ...nter \texttt{chrome://flags/#enable-webvr}
+                                                   in the URL bar) and the "...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
 
-Overfull \hbox (42.5089pt too wide) in paragraph at lines 7--16
-\T1/lmtt/m/n/12 s˙ aj na prilo∫en˝ch diskoch alebo disket·ch. Ak je mÈdiÌ viac,
- s˙ ozna£enÈ
- []
+! Illegal parameter number in definition of \reserved@a.
+<to be read again> 
+                   e
+l.69 ...chrome://flags/#enable-gamepad-extensions}
+                                                   in the URL bar), or launc...
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
 
+! You can't use `macro parameter character #' in horizontal mode.
+<argument> chrome://flags/##
+                            enable-gamepad-extensions
+l.69 ...chrome://flags/#enable-gamepad-extensions}
+                                                   in the URL bar), or launc...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
 
-Overfull \hbox (1.03223pt too wide) in paragraph at lines 7--16
-\T1/lmtt/m/n/12 aj £Ìselne v tvare $\OML/lmm/m/it/12 I=N$\T1/lmtt/m/n/12 , kde 
-$\OML/lmm/m/it/12 I$ \T1/lmtt/m/n/12 je poradovÈ £Ìslo a $\OML/lmm/m/it/12 N$ \
-T1/lmtt/m/n/12 je celkov˝ po£et
- []
+<figures/chromium-flag.png, id=1625, 1202.4925pt x 694.595pt>
+File: figures/chromium-flag.png Graphic file (type png)
 
-
-Overfull \hbox (15.70674pt too wide) in paragraph at lines 17--19
-[]\T1/lmtt/m/n/12 CD mÈdium -- z·vere£n· pr·ca v elektronickej podobe, prÌlohy
- []
-
-)
-Overfull \hbox (17.80888pt too wide) in paragraph at lines 22--392
-\T1/lmtt/m/n/12 PrÌlohov· £as¥ je samostatnou £as¥ou kvalifika£nej pr·ce. Ka∫d·
- prÌloha
- []
-
-
-Overfull \hbox (5.45888pt too wide) in paragraph at lines 22--392
-\T1/lmtt/m/n/12 za£Ìna na novej strane a je ozna£en· samostatn˝m pÌsmenom (Appe
-ndix A,
- []
-
-
-Overfull \hbox (17.80888pt too wide) in paragraph at lines 22--392
-\T1/lmtt/m/n/12 Appendix B, ...). ÉÌslovanie str·n prÌloh nadv‰zuje na £Ìslovan
-ie str·n
- []
-
-
-Overfull \hbox (11.63388pt too wide) in paragraph at lines 22--392
-\T1/lmtt/m/n/12 v hlavnom texte. Pri ka∫dej prÌlohe sa m· uvies¥ prame¨, z ktor
-Èho sme
- []
-
-[62
-
-
-]
+<use figures/chromium-flag.png>
+Package pdftex.def Info: figures/chromium-flag.png used on input line 73.
+(pdftex.def)             Requested size: 384.10959pt x 221.8722pt.
+ [72 <./figures/room-scale-setup.jpg>]) [73 <./figures/chromium-flag.png>]
 \openout2 = `appendixb.aux'.
 
  (./appendixb.tex
-Overfull \hbox (17.80888pt too wide) in paragraph at lines 7--16
-\T1/lmtt/m/n/12 T·to £as¥ z·vere£nej pr·ce je povinn·. V zozname pou∫itej liter
-at˙ry sa
- []
-
-
-Overfull \hbox (61.0129pt too wide) in paragraph at lines 7--16
-\T1/lmtt/m/n/12 uv·dzaj˙ odkazy pod©a normy STN ISO 690--2 (01 0197) (Inform·ci
-e a dokument·cia.
- []
-
-
-Overfull \hbox (23.98389pt too wide) in paragraph at lines 7--16
-\T1/lmtt/m/n/12 BibliografickÈ cit·cie. Éas¥ 2: ElektronickÈ dokumenty alebo ic
-h £asti,
- []
-
-
-Overfull \hbox (36.3339pt too wide) in paragraph at lines 7--16
-\T1/lmtt/m/n/12 d·tum vydania 1. 12. 2001, ICS: 01.140.20). Odkazy sa mÙ∫u t˝ka
-¥ kni∫n˝ch,
- []
-
-
-Overfull \hbox (36.3339pt too wide) in paragraph at lines 7--16
-\T1/lmtt/m/n/12 £asopiseck˝ch a in˝ch zdrojov inform·ciÌ (zbornÌky z konferenci
-Ì, patentovÈ
- []
-
-
-Overfull \hbox (17.80888pt too wide) in paragraph at lines 7--16
-\T1/lmtt/m/n/12 dokumenty, normy, odpor˙£ania, kvalifika£nÈ pr·ce, osobn· kore≤
-pondencia
- []
-
-
-Overfull \hbox (11.63388pt too wide) in paragraph at lines 7--16
-\T1/lmtt/m/n/12 a rukopisy, odkazy cez sprostredkuj˙ci zdroj, elektronickÈ publ
-ik·cie),
- []
-
-
-Overfull \hbox (23.98389pt too wide) in paragraph at lines 17--21
-[]\T1/lmtt/m/n/12 Forma cit·ciÌ sa zabezpe£uje niektorou z metÛd, opÌsan˝ch v n
-orme STN ISO
- []
-
-
-Overfull \hbox (104.23091pt too wide) in paragraph at lines 17--21
-\T1/lmtt/m/n/12 690, 1998, s. 21. Podrobnej≤ie inform·cie n·jdete na str·nke ht
-tp://www.tuke.sk/anta/
- []
-
-LaTeX Font Info:    Try loading font information for OMS+lmtt on input line 25.
-
-LaTeX Font Info:    No file OMSlmtt.fd. on input line 25.
-
-LaTeX Font Warning: Font shape `OMS/lmtt/m/n' undefined
-(Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbullet' on input line 25.
-
-
-Package natbib Warning: Citation `kat' on page 63 undefined on input line 31.
-
-
-Package natbib Warning: Citation `gonda' on page 63 undefined on input line 31.
-
-
-
-Overfull \hbox (5.11674pt too wide) in paragraph at lines 29--34
-[]\T1/lmtt/m/it/12 Preferovanou metÛdou citovania \T1/lmtt/m/n/12 v texte vysok
-o≤kolskej a kvalifika£nej
- []
-
-
-Overfull \hbox (30.55888pt too wide) in paragraph at lines 29--34
-\T1/lmtt/m/n/12 pr·ce je pod©a normy ISO 7144 citovanie pod©a mena a d·tumu (\T
-1/lmr/bx/n/12 ??\T1/lmtt/m/n/12 ). V tomto
- []
-
-
-Overfull \hbox (23.98389pt too wide) in paragraph at lines 29--34
-\T1/lmtt/m/n/12 prÌpade sa zoznam pou∫itej literat˙ry upravÌ tak, ∫e za meno sa
- prid· rok
- []
-
-
-Overfull \hbox (23.98389pt too wide) in paragraph at lines 29--34
-\T1/lmtt/m/n/12 vydania. Na u©ah£enie vyh©ad·vania cit·ciÌ sa zoznam vytv·ra v 
-abecednom
- []
-
-
-Package natbib Warning: Citation `steinerova' on page 63 undefined on input lin
-e 38.
-
-
-Overfull \hbox (24.18388pt too wide) in paragraph at lines 37--40
-[]\T1/lmtt/m/n/12 PrÌklad: ...pod©a (\T1/lmr/bx/n/12 ?\T1/lmtt/m/n/12 ) je t·to
- metÛda dostato£ne rozpracovan· na to, aby
- []
-
-
-Overfull \hbox (17.80888pt too wide) in paragraph at lines 43--46
-[]\T1/lmtt/m/n/12 Druh˝ spÙsob uvedenia odkazu na pou∫it˙ literat˙ru je uvedeni
-e len £Ìsla
- []
-
-
-Overfull \hbox (30.15889pt too wide) in paragraph at lines 43--46
-\T1/lmtt/m/n/12 tohto zdroja v hranat˝ch z·tvork·ch bez mena autora (autorov) n
-aj£astej≤ie
- []
-
-[63
-
-
-]
-Overfull \hbox (23.98389pt too wide) in paragraph at lines 49--52
-[]\T1/lmtt/m/n/12 PrÌklad: ...pod©a [13] je t·to metÛda dostato£ne rozpracovan·
- na to, aby
- []
-
-
-Overfull \hbox (42.5089pt too wide) in paragraph at lines 55--60
-[]\T1/lmtt/m/n/12 Cit·cie s˙ spojenÈ s bibliografick˝m odkazom poradov˝m £Ìslom
- v tvare indexu
- []
-
-
-Overfull \hbox (23.98389pt too wide) in paragraph at lines 55--60
-\T1/lmtt/m/n/12 alebo £Ìsla v hranat˝ch z·tvork·ch. Odkazy v zozname na konci p
-r·ce bud˙
- []
-
-
-Overfull \hbox (11.63388pt too wide) in paragraph at lines 55--60
-\T1/lmtt/m/n/12 usporiadanÈ pod©a t˝chto poradov˝ch £Ìsel. Viacero cit·ciÌ toho
- istÈho
- []
-
-
-Overfull \hbox (17.80888pt too wide) in paragraph at lines 55--60
-\T1/lmtt/m/n/12 diela bude ma¥ rovnakÈ £Ìslo. Odpor˙£a sa usporiada¥ jednotlivÈ
- polo∫ky
- []
-
-
-Overfull \hbox (5.45888pt too wide) in paragraph at lines 62--65
-\T1/lmtt/m/n/12 RÙzne spÙsoby odkazov je mo∫nÈ dosiahnu¥ zmenou vo©by v balÌku 
-[]natbib: 
- []
-
-
-Overfull \hbox (36.3339pt too wide) in paragraph at lines 77--80
-\T1/lmtt/m/n/12 Ke§ zapneme vo©bu []numbers, prepneme sa do re∫imu citovania po
-d©a odkazovÈho
- []
-
-
-Overfull \hbox (42.5089pt too wide) in paragraph at lines 89--91
-[]\T1/lmtt/m/n/12 V odkaze na kni∫n˙ publik·ciu (pozri prÌklad zoznamov na konc
-i tejto £asti): 
- []
-
-[64]
-Overfull \hbox (10.13356pt too wide) in paragraph at lines 92--94
-[]\T1/lmtt/m/n/12 Uv·dzame jedno, dve alebo tri prvÈ men· oddelenÈ poml£kou, os
-tatnÈ
- []
-
-
-Overfull \hbox (28.65857pt too wide) in paragraph at lines 94--96
-[]\T1/lmtt/m/n/12 Podn·zov sa mÙ∫e zapÌsa¥ vtedy, ak to u©ah£Ì identifik·ciu do
-kumentu.
- []
-
-
-Overfull \hbox (10.13356pt too wide) in paragraph at lines 96--99
-[]\T1/lmtt/m/n/12 Dlh˝ n·zov sa mÙ∫e skr·ti¥ v prÌpade, ak sa t˝m nestratÌ pods
-tatn·
- []
-
-
-Overfull \hbox (16.30856pt too wide) in paragraph at lines 96--99
-\T1/lmtt/m/n/12 inform·cia. Nikdy sa neskracuje za£iatok n·zvu. V≤etky vynech·v
-ky
- []
-
-
-Overfull \hbox (36.3339pt too wide) in paragraph at lines 101--103
-[]\T1/lmtt/m/n/12 Pri vyu∫ÌvanÌ inform·ciÌ z elektronick˝ch dokumentov treba do
-dr∫iava¥ tieto
- []
-
-
-Overfull \hbox (3.95856pt too wide) in paragraph at lines 104--106
-[]\T1/lmtt/m/n/12 uprednost¨ujeme autorizovanÈ s˙bory solÌdnych slu∫ieb a systÈ
-mov, 
- []
-
-
-Overfull \hbox (22.48357pt too wide) in paragraph at lines 106--108
-[]\T1/lmtt/m/n/12 zaznamen·me dostatok inform·ciÌ o s˙bore tak, aby ho bolo op‰
-¥ mo∫nÈ
- []
-
-
-Overfull \hbox (16.30856pt too wide) in paragraph at lines 108--110
-[]\T1/lmtt/m/n/12 urobÌme si kÛpiu pou∫itÈho prame¨a v elektronickej alebo papi
-erovej
- []
-
-
-Overfull \hbox (53.35858pt too wide) in paragraph at lines 110--112
-[]\T1/lmtt/m/n/12 za verifikovate©nos¥ inform·ciÌ zodpoved· autor, ktor˝ sa na 
-ne odvol·va. 
- []
-
-
-Overfull \hbox (36.3339pt too wide) in paragraph at lines 114--116
-[]\T1/lmtt/m/n/12 Pre z·pis elektronick˝ch dokumentov platia tie istÈ pravidl·,
- ako pre z·pis
- []
-
-)
-Overfull \hbox (23.98389pt too wide) in paragraph at lines 122--394
-[]\T1/lmtt/m/n/12 Poradie prvkov odkazu je nasledovnÈ: Autor. N·zov. In N·zov p
-rim·rneho
- []
-
-
-Overfull \hbox (30.15889pt too wide) in paragraph at lines 122--394
-\T1/lmtt/m/n/12 zdroja: Podn·zov. [Druh nosi£a]. Editor. Vydanie alebo verzia. 
-Miesto
- []
-
-
-Overfull \hbox (67.20891pt too wide) in paragraph at lines 122--394
-\T1/lmtt/m/n/12 vydania : Vydavate©, d·tum vydania. [D·tum citovania]. Pozn·mky
-. Dostupnos¥.
- []
-
-[65] [66]
-
-Package natbib Warning: There were undefined citations.
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 404.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 404.
-(./tukethesis.aux (./introduction.aux) (./problemexpression.aux)
-(./theoreticalanalysis.aux) (./currentstate.aux) (./design.aux)
-(./implementation.aux) (./conclusion.aux) (./bibliography.aux)
-(./appendices.aux) (./appendixa.aux) (./appendixb.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 404.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 404.
+<figures/htc-vive-headset.png, id=1637, 502.87875pt x 221.82875pt>
+File: figures/htc-vive-headset.png Graphic file (type png)
+
+<use figures/htc-vive-headset.png>
+Package pdftex.def Info: figures/htc-vive-headset.png used on input line 11.
+(pdftex.def)             Requested size: 341.43436pt x 150.61136pt.
+ [74
+
+
+ <./figures/htc-vive-headset.png>]
+<figures/vive-controllers.png, id=1652, 376.40625pt x 307.1475pt>
+File: figures/vive-controllers.png Graphic file (type png)
+
+<use figures/vive-controllers.png>
+Package pdftex.def Info: figures/vive-controllers.png used on input line 28.
+(pdftex.def)             Requested size: 384.10959pt x 313.45502pt.
+ [75 <./figures/vive-controllers.png>]
+[76] <figures/pfunc-component.png, id=1674, 841.1425pt x 654.445pt>
+File: figures/pfunc-component.png Graphic file (type png)
+
+<use figures/pfunc-component.png>
+Package pdftex.def Info: figures/pfunc-component.png used on input line 50.
+(pdftex.def)             Requested size: 384.10959pt x 298.85143pt.
+ [77 <./figures/pfunc-component.png>]
+<figures/settings-component.png, id=1682, 551.05875pt x 421.575pt>
+File: figures/settings-component.png Graphic file (type png)
+
+<use figures/settings-component.png>
+Package pdftex.def Info: figures/settings-component.png used on input line 61.
+(pdftex.def)             Requested size: 384.10959pt x 293.8654pt.
+ [78 <./figures/settings-component.png>]
+<figures/calculator-component.png, id=1689, 796.9775pt x 578.16pt>
+File: figures/calculator-component.png Graphic file (type png)
+
+<use figures/calculator-component.png>
+Package pdftex.def Info: figures/calculator-component.png used on input line 72
+.
+(pdftex.def)             Requested size: 384.10959pt x 278.64285pt.
+) [79 <./figures/calculator-component.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 278.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 278.
+ (./tukethesis.aux (./introduction.aux) (./problemexpression.aux)
+(./currentstate.aux) (./design.aux) (./implementation.aux) (./conclusion.aux)
+(./bibliography.aux) (./appendices.aux) (./appendixa.aux) (./appendixb.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 278.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 278.
 Package rerunfilecheck Info: File `tukethesis.out' has not changed.
-(rerunfilecheck)             Checksum: 016123CB5A9FB5413C601A54F618A00B;15026.
+(rerunfilecheck)             Checksum: 2550EADA794C702ED0E8B51C9318A26E;14978.
 
 
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 404.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 278.
  )
-(\end occurred inside a group at level 3)
+(\end occurred inside a group at level 1)
 
-### simple group (level 3) entered at line 925 ({)
-### simple group (level 2) entered at line 906 ({)
-### simple group (level 1) entered at line 296 ({)
+### simple group (level 1) entered at line 180 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 14872 strings out of 493015
- 201926 string characters out of 6133376
- 366494 words of memory out of 5000000
- 17220 multiletter control sequences out of 15000+600000
- 90448 words of font info for 74 fonts, out of 8000000 for 9000
+ 14194 strings out of 493015
+ 194978 string characters out of 6133376
+ 353585 words of memory out of 5000000
+ 16677 multiletter control sequences out of 15000+600000
+ 70980 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,9n,60p,981b,2629s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 29i,9n,42p,1030b,2028s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-ec.en
-c}{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/lo
-cal/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texliv
-e/2016/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}</usr/local/texlive/2016/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-di
-st/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2016/texmf-dist/fonts/t
-ype1/public/lm/lmbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/publi
-c/lm/lmmi10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmmi1
-2.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr
-/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texl
-ive/2016/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2016/te
-xmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2016/texmf-dist/fo
-nts/type1/public/lm/lmr6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/pu
+c}{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/lo
+cal/texlive/2016/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texliv
+e/2016/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2016/tex
+mf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2016/texmf-dist/fon
+ts/type1/public/lm/lmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/pu
 blic/lm/lmr8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmri
-10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmro10.pfb></u
-sr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmro12.pfb></usr/local/t
-exlive/2016/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/local/texlive/201
-6/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2016/texmf-di
-st/fonts/type1/public/lm/lmsy6.pfb></usr/local/texlive/2016/texmf-dist/fonts/ty
-pe1/public/lm/lmsy8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/
-lm/lmtk10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmtt10.
-pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmtt12.pfb></usr/
-local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmtti10.pfb>
-Output written on tukethesis.pdf (81 pages, 4083084 bytes).
+10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmri12.pfb></u
+sr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmro10.pfb></usr/local/t
+exlive/2016/texmf-dist/fonts/type1/public/lm/lmro12.pfb></usr/local/texlive/201
+6/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/local/texlive/2016/texmf-di
+st/fonts/type1/public/lm/lmss12.pfb></usr/local/texlive/2016/texmf-dist/fonts/t
+ype1/public/lm/lmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/publi
+c/lm/lmtk10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmtt1
+0.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
+Output written on tukethesis.pdf (93 pages, 7629494 bytes).
 PDF statistics:
- 1925 PDF objects out of 2073 (max. 8388607)
- 1775 compressed objects within 18 object streams
- 903 named destinations out of 1000 (max. 500000)
- 696 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1909 PDF objects out of 2073 (max. 8388607)
+ 1733 compressed objects within 18 object streams
+ 768 named destinations out of 1000 (max. 500000)
+ 753 words of extra memory for PDF output out of 10000 (max. 10000000)
 

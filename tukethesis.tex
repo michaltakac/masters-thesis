@@ -8,6 +8,23 @@
 \usepackage[T1]{fontenc}
 \usepackage{cmap}
 \usepackage{lmodern}
+\usepackage{url}
+\expandafter\def\expandafter\UrlBreaks\expandafter{\UrlBreaks%  save the current one
+  \do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j%
+  \do\k\do\l\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t%
+  \do\u\do\v\do\w\do\x\do\y\do\z\do\A\do\B\do\C\do\D%
+  \do\E\do\F\do\G\do\H\do\I\do\J\do\K\do\L\do\M\do\N%
+  \do\O\do\P\do\Q\do\R\do\S\do\T\do\U\do\V\do\W\do\X%
+  \do\Y\do\Z}
+
+\newcommand*\justify{%
+  \fontdimen2\font=0.4em% interword space
+  \fontdimen3\font=0.2em% interword stretch
+  \fontdimen4\font=0.1em% interword shrink
+  \fontdimen7\font=0.1em% extra space
+  \hyphenchar\font=`\-% allowing hyphenation
+}
+
 \usepackage{dirtree}
 %Define the listing package
 \usepackage{listings} %code highlighter
@@ -27,139 +44,6 @@
   morestring=[b]`
 }
 
-\lstdefinelanguage{HTML5}{
-        language=html,
-        sensitive=true, 
-            alsoletter={<>=-},
-            otherkeywords={
-            % HTML tags
-            <, </, >,
-            </a, <a, </a>,
-            </abbr, <abbr, </abbr>,
-            </address, <address, </address>,
-            </area, <area, </area>,
-            </area, <area, </area>,
-            </article, <article, </article>,
-            </aside, <aside, </aside>,
-            </audio, <audio, </audio>,
-            </audio, <audio, </audio>,
-            </b, <b, </b>,
-            </base, <base, </base>,
-            </bdi, <bdi, </bdi>,
-            </bdo, <bdo, </bdo>,
-            </blockquote, <blockquote, </blockquote>,
-            </body, <body, </body>,
-            </br, <br, </br>,
-            </button, <button, </button>,
-            </canvas, <canvas, </canvas>,
-            </caption, <caption, </caption>,
-            </cite, <cite, </cite>,
-            </code, <code, </code>,
-            </col, <col, </col>,
-            </colgroup, <colgroup, </colgroup>,
-            </data, <data, </data>,
-            </datalist, <datalist, </datalist>,
-            </dd, <dd, </dd>,
-            </del, <del, </del>,
-            </details, <details, </details>,
-            </dfn, <dfn, </dfn>,
-            </div, <div, </div>,
-            </dl, <dl, </dl>,
-            </dt, <dt, </dt>,
-            </em, <em, </em>,
-            </embed, <embed, </embed>,
-            </fieldset, <fieldset, </fieldset>,
-            </figcaption, <figcaption, </figcaption>,
-            </figure, <figure, </figure>,
-            </footer, <footer, </footer>,
-            </form, <form, </form>,
-            </h1, <h1, </h1>,
-            </h2, <h2, </h2>,
-            </h3, <h3, </h3>,
-            </h4, <h4, </h4>,
-            </h5, <h5, </h5>,
-            </h6, <h6, </h6>,
-            </head, <head, </head>,
-            </header, <header, </header>,
-            </hr, <hr, </hr>,
-            </html, <html, </html>,
-            </i, <i, </i>,
-            </iframe, <iframe, </iframe>,
-            </img, <img, </img>,
-            </input, <input, </input>,
-            </ins, <ins, </ins>,
-            </kbd, <kbd, </kbd>,
-            </keygen, <keygen, </keygen>,
-            </label, <label, </label>,
-            </legend, <legend, </legend>,
-            </li, <li, </li>,
-            </link, <link, </link>,
-            </main, <main, </main>,
-            </map, <map, </map>,
-            </mark, <mark, </mark>,
-            </math, <math, </math>,
-            </menu, <menu, </menu>,
-            </menuitem, <menuitem, </menuitem>,
-            </meta, <meta, </meta>,
-            </meter, <meter, </meter>,
-            </nav, <nav, </nav>,
-            </noscript, <noscript, </noscript>,
-            </object, <object, </object>,
-            </ol, <ol, </ol>,
-            </optgroup, <optgroup, </optgroup>,
-            </option, <option, </option>,
-            </output, <output, </output>,
-            </p, <p, </p>,
-            </param, <param, </param>,
-            </pre, <pre, </pre>,
-            </progress, <progress, </progress>,
-            </q, <q, </q>,
-            </rp, <rp, </rp>,
-            </rt, <rt, </rt>,
-            </ruby, <ruby, </ruby>,
-            </s, <s, </s>,
-            </samp, <samp, </samp>,
-            </script, <script, </script>,
-            </section, <section, </section>,
-            </select, <select, </select>,
-            </small, <small, </small>,
-            </source, <source, </source>,
-            </span, <span, </span>,
-            </strong, <strong, </strong>,
-            </style, <style, </style>,
-            </summary, <summary, </summary>,
-            </sup, <sup, </sup>,
-            </svg, <svg, </svg>,
-            </table, <table, </table>,
-            </tbody, <tbody, </tbody>,
-            </td, <td, </td>,
-            </template, <template, </template>,
-            </textarea, <textarea, </textarea>,
-            </tfoot, <tfoot, </tfoot>,
-            </th, <th, </th>,
-            </thead, <thead, </thead>,
-            </time, <time, </time>,
-            </title, <title, </title>,
-            </tr, <tr, </tr>,
-            </track, <track, </track>,
-            </u, <u, </u>,
-            </ul, <ul, </ul>,
-            </var, <var, </var>,
-            </video, <video, </video>,
-            </wbr, <wbr, </wbr>,
-            />, <!
-            }, 
-        ndkeywords={
-        % General
-        =,
-        % HTML attributes
-        charset=, id=, width=, height=,
-        % CSS properties
-        border:, transform:, -moz-transform:, transition-duration:, transition-property:, transition-timing-function:
-        },  
-        morecomment=[s]{<!--}{-->},
-        tag=[s]
-}
 
 %% ---- definicia slovenskych uvodzoviek
 \chardef\clqq=18 \sfcode18=0
@@ -234,12 +118,12 @@ pdfsubject={Bachelor's Thesis}
 \facultyabbr{FBERG}
 \department{Institute of Control and Informatization of Production Processes}
 \departmentabbr{ÚRaIVP}
-\fieldofstudy{Gathering and Processing of Earth Resources}
-\studyprogramme{Informatization Process of Obtaining and Processing Raw Materials}
+\fieldofstudy{Recovering and processing of earth resources}
+\studyprogramme{Informatization of Processes of Raw Materials Extraction and Processing}
 \supervisor{RNDr.~Andrea~Mojžišová, PhD.}
 \consultanta{RNDr.~Jana~Pócsová, PhD.}
 %\consultantb{RNDr.~Marián Čierny, DrSc.}
-\dateofsubmission{April. 24. 2017} 
+\dateofsubmission{April. 21. 2017} 
 \town{Košice}
 \abstrakt{Abstrakt je povinnou súčasťou každej práce. Je výstižnou
 charakteristikou obsahu dokumentu. Nevyjadruje hodnotiace stanovisko
@@ -309,12 +193,12 @@ skratky a~symboly sa pri prvom výskyte v texte definujú.}
 \acknowledgement % begin the 'Acknowledgement'
 I would like to express my sincere thanks to RNDr~Andrea
 Mojžišová, PhD, the main Supervisor, for her constant and constructive guidance throughout the study, valuable feedback and brainstorming sessions. Special mention should go
-to RNDr~Jana Pócsová, PhD. for her interest in new approaches to teaching and her ability to listen and give feedback to novel ideas when others are not interested and also to prof. Steven Abbott for helping me out with Oculus Touch support. To all other who gave a hand, I say thank you
+to RNDr~Jana Pócsová, PhD. for her interest in new approaches to teaching and her ability to listen and give feedback to novel ideas when others are not interested and also to prof. Steven Abbott for helping me out with Oculus Touch support. Thanks to \textsl{Sleighdogs, GmbH} for sponsoring the project. To all other who gave a hand, I say thank you
 very much.
 \endacknowledgement
 
 \preface % begin the 'Preface'
-Mathematical knowledge is often fundamental when solving real life problems. Especially, problems situated in the three-dimensional domain that require spatial skills are sometimes hard to understand for students. Many students have difficulties with spatial imagination and lack spatial abilities. Recently, a number of training studies have shown the usefulness of virtual reality in training spatial ability. Therefore I set myself a goal for finding inresections between virtual reality and higher education by building experimental virtual user interface(s) and testing them in educational environments, e.g. colleges and universities. In this thesis I'll focus on mathematics.
+Mathematical knowledge is often fundamental when solving real life problems. Especially, problems situated in the three-dimensional domain that require spatial skills are sometimes hard to understand for students. Many students have difficulties with spatial imagination and lack spatial abilities. Recently, a number of training studies have shown the usefulness of virtual reality in training spatial ability. Therefore I set myself a goal to find inresections between virtual reality and higher education by building experimental virtual user interface(s) and testing them in educational environments, e.g. colleges and universities. In this thesis I'll focus on mathematics.
 \endpreface
 
 \thispagestyle{empty}
@@ -340,34 +224,24 @@ Mathematical knowledge is often fundamental when solving real life problems. Esp
 %\addcontentsline{toc}{section}{\numberline{}List of Therms}
 \listofterms % begin the 'List of Therms'
 
-\newpage
-\lstlistoflistings
-
 \begin{description}
-%\item[DOF] Degrees of freedom
-%	\item[Dizertácia] je rozsiahla vedecká rozprava, v~ktorej sa na
-%základe vedeckého výskumu a~s~použitím (využitím) bohatého dokladového
-%materiálu  ako i~vedeckých metód rieši zložitý odborný problém.
-%	\item[Font] je súbor, obsahujúci predpisy na zobrazenie textu
-%v~danom písme, napr. na tlačiarni. To čo vidíme je písmo; font je súbor
-%a~nevidíme ho.
-%	\item[Kritika] je odborne vyhrotený, prísny pohľad na hodnotenú
-%vec. Medzi recenziou a kritikou je taký pomer ako medzi diskusiou a
-%polemikou. Pri kritike treba prísnosť\/ chápať\/ v~tom zmysle, že sa
-%v~nej okrem iného navrhuje, ako hodnotené dielo skvalitniť\/.
-%	\item[Meter (m)] je vzdialenosť\/, ktorú svetlo vo vákuu prejde
-%za časový interval $\nicefrac{1}{299\,792\,458}$~sekundy.
-%	\item[Písmom] rozumieme vlastný vzhľad znakov.
-%	\item[Problém] termín používaný vo všeobecnom zmysle vo vzťahu
-%k~akejkoľvek duševnej aktivite, ktorá má nejaký rozoznateľný cieľ.
-%Samotný cieľ nemusí byť\/ v~dohľadne. Problémy možno charakterizovať\/
-%tromi rozmermi -- oblasťou, obtiažnosťou a veľkosťou.
-%	\item[Proces] je postupnonosť\/ či rad časovo usporiadaných
-%udalostí tak, že každá predchádzajúca udalosť\/ sa zúčastňuje na
-%determinácii nasledujúcej udalosti.
+\item[DoF] Degrees of freedom (6DoF = six degrees of freedom)
+\item[VR] Virtual Reality
+\item[WebVR] Virtual Reality on the web
+\item[API] Application Programming Interface
+\item[ES6] ECMAScript version 6
+\item[DOM] Document Object Model
+\item[HTML]Hyper Text Markup Language
+\item[WebGL] Web-based Graphics Library
+\item[HMD] Head-mounted display
+\item[VLE] Virtual Learning Environment
 \end{description}
 
 \endlistofterms
+
+
+\newpage
+\lstlistoflistings
 
 
 %
@@ -375,7 +249,7 @@ Mathematical knowledge is often fundamental when solving real life problems. Esp
 %
 \include{problemexpression}
 %
-\include{theoreticalanalysis}
+%\include{theoreticalanalysis}
 %
 \include{currentstate}
 %

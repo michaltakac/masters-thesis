@@ -1,81 +1,80 @@
 \select@language {english}
 \contentsline {section}{\hbox to\@tempdima {\hfil }Introduction}{1}{section*.7}
-\contentsline {section}{\numberline {1}Problem expression}{2}{section.1}
-\contentsline {subsection}{\numberline {1.1}Methodology of the thesiss}{2}{subsection.1.1}
-\contentsline {section}{\numberline {2}Theoretical analysis}{4}{section.2}
-\contentsline {section}{\numberline {3}Analysis of current state}{5}{section.3}
-\contentsline {subsection}{\numberline {3.1}Building virtual reality applications and experiences}{5}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Virtual reality on the web}{5}{subsection.3.2}
-\contentsline {section}{\numberline {4}Technologies and tools for development}{6}{section.4}
-\contentsline {subsection}{\numberline {4.1}JavaScript}{6}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}NPM}{7}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}Three.js}{8}{subsection.4.3}
-\contentsline {subsection}{\numberline {4.4}A-Frame}{8}{subsection.4.4}
-\contentsline {subsubsection}{\numberline {4.4.1}JavaScript and Aframe}{9}{subsubsection.4.4.1}
-\contentsline {subsubsection}{\numberline {4.4.2}Entity-Component System}{9}{subsubsection.4.4.2}
-\contentsline {subsubsection}{\numberline {4.4.3}Component Ecosystem}{10}{subsubsection.4.4.3}
-\contentsline {subsubsection}{\numberline {4.4.4}A-Frame Inspector}{11}{subsubsection.4.4.4}
-\contentsline {subsubsection}{\numberline {4.4.5}Device and Platform Support}{11}{subsubsection.4.4.5}
-\contentsline {subsubsection}{\numberline {4.4.6}Hardware specification}{12}{subsubsection.4.4.6}
-\contentsline {subsection}{\numberline {4.5}Math.js}{13}{subsection.4.5}
-\contentsline {subsection}{\numberline {4.6}React}{13}{subsection.4.6}
-\contentsline {subsection}{\numberline {4.7}Flux}{13}{subsection.4.7}
-\contentsline {subsubsection}{\numberline {4.7.1}Structure and Data Flow in Flux architecture}{14}{subsubsection.4.7.1}
-\contentsline {subsection}{\numberline {4.8}Redux}{16}{subsection.4.8}
-\contentsline {subsubsection}{\numberline {4.8.1}Three Principles of Redux}{17}{subsubsection.4.8.1}
-\contentsline {subsection}{\numberline {4.9}Webpack}{18}{subsection.4.9}
-\contentsline {section}{\numberline {5}Conceptualisation and design}{20}{section.5}
-\contentsline {subsection}{\numberline {5.1}Inputs and objections}{20}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}Functionality planning}{20}{subsection.5.2}
-\contentsline {subsection}{\numberline {5.3}Virtual user interface}{20}{subsection.5.3}
-\contentsline {section}{\numberline {6}Implementation of virtual reality application}{21}{section.6}
-\contentsline {subsection}{\numberline {6.1}Project initialization}{21}{subsection.6.1}
-\contentsline {subsection}{\numberline {6.2}Installing JavaScript packages}{22}{subsection.6.2}
-\contentsline {subsection}{\numberline {6.3}NPM scripts}{24}{subsection.6.3}
-\contentsline {subsection}{\numberline {6.4}Project structure}{25}{subsection.6.4}
-\contentsline {subsection}{\numberline {6.5}Webpack configuration}{26}{subsection.6.5}
-\contentsline {subsection}{\numberline {6.6}Webpack development server}{26}{subsection.6.6}
-\contentsline {subsection}{\numberline {6.7}Setting up Redux for application state management}{27}{subsection.6.7}
-\contentsline {subsubsection}{\numberline {6.7.1}Initial state}{27}{subsubsection.6.7.1}
-\contentsline {subsubsection}{\numberline {6.7.2}Actions}{27}{subsubsection.6.7.2}
-\contentsline {subsubsection}{\numberline {6.7.3}Action creators}{28}{subsubsection.6.7.3}
-\contentsline {subsubsection}{\numberline {6.7.4}Reducers}{30}{subsubsection.6.7.4}
-\contentsline {subsubsection}{\numberline {6.7.5}Store}{33}{subsubsection.6.7.5}
-\contentsline {subsection}{\numberline {6.8}A-Frame scene}{35}{subsection.6.8}
-\contentsline {subsection}{\numberline {6.9}Camera component}{37}{subsection.6.9}
-\contentsline {subsection}{\numberline {6.10}Sky component}{37}{subsection.6.10}
-\contentsline {subsection}{\numberline {6.11}Plane component}{38}{subsection.6.11}
-\contentsline {subsection}{\numberline {6.12}Lights component}{39}{subsection.6.12}
-\contentsline {subsection}{\numberline {6.13}Text component}{40}{subsection.6.13}
-\contentsline {subsection}{\numberline {6.14}CalcButton component}{40}{subsection.6.14}
-\contentsline {subsection}{\numberline {6.15}Calculator component}{40}{subsection.6.15}
-\contentsline {subsubsection}{\numberline {6.15.1}Action types}{40}{subsubsection.6.15.1}
-\contentsline {subsubsection}{\numberline {6.15.2}Action creators}{40}{subsubsection.6.15.2}
-\contentsline {subsubsection}{\numberline {6.15.3}Initial state}{41}{subsubsection.6.15.3}
-\contentsline {subsubsection}{\numberline {6.15.4}Reducer function}{41}{subsubsection.6.15.4}
-\contentsline {subsubsection}{\numberline {6.15.5}Higher-order component}{43}{subsubsection.6.15.5}
-\contentsline {subsubsection}{\numberline {6.15.6}Presentational component}{44}{subsubsection.6.15.6}
-\contentsline {subsection}{\numberline {6.16}CalcButton component}{45}{subsection.6.16}
-\contentsline {subsection}{\numberline {6.17}Adding components together}{46}{subsection.6.17}
-\contentsline {subsection}{\numberline {6.18}ParametrizedFunction component}{46}{subsection.6.18}
-\contentsline {subsubsection}{\numberline {6.18.1}Extending A-Frame API with parametrizedfunction component}{46}{subsubsection.6.18.1}
-\contentsline {subsubsection}{\numberline {6.18.2}Action types}{49}{subsubsection.6.18.2}
-\contentsline {subsubsection}{\numberline {6.18.3}Action creators}{49}{subsubsection.6.18.3}
-\contentsline {subsubsection}{\numberline {6.18.4}Initial state}{49}{subsubsection.6.18.4}
-\contentsline {subsubsection}{\numberline {6.18.5}Reducer function}{50}{subsubsection.6.18.5}
-\contentsline {subsubsection}{\numberline {6.18.6}Higher-order component}{50}{subsubsection.6.18.6}
-\contentsline {subsubsection}{\numberline {6.18.7}Presentational component}{51}{subsubsection.6.18.7}
-\contentsline {subsection}{\numberline {6.19}SettingsPanel component}{52}{subsection.6.19}
-\contentsline {subsection}{\numberline {6.20}Hand controller components}{53}{subsection.6.20}
-\contentsline {subsection}{\numberline {6.21}Adding components into A-Frame scene}{55}{subsection.6.21}
-\contentsline {subsection}{\numberline {6.22}Interactions}{56}{subsection.6.22}
-\contentsline {subsubsection}{\numberline {6.22.1}Grabbing}{56}{subsubsection.6.22.1}
-\contentsline {subsubsection}{\numberline {6.22.2}Scaling}{57}{subsubsection.6.22.2}
-\contentsline {subsection}{\numberline {6.23}Parsing equations with Math.js}{57}{subsection.6.23}
-\contentsline {subsection}{\numberline {6.24}AttentionBox component}{57}{subsection.6.24}
-\contentsline {subsection}{\numberline {6.25}Building and deploying the application to web hosting}{57}{subsection.6.25}
-\contentsline {section}{\numberline {7}Conclusion}{58}{section.7}
-\contentsline {section}{\hbox to\@tempdima {\hfil }{Bibliography}}{59}{section*.8}
-\contentsline {section}{\hbox to\@tempdima {\hfil }Appendices}{61}{section*.9}
-\contentsline {section}{\hbox to\@tempdima {\hfil }Appendix A}{62}{section*.10}
-\contentsline {section}{\hbox to\@tempdima {\hfil }Appendix B}{63}{section*.12}
+\contentsline {section}{\numberline {1}Problem expression}{3}{section.1}
+\contentsline {subsection}{\numberline {1.1}Methodology of the~thesiss}{3}{subsection.1.1}
+\contentsline {section}{\numberline {2}Analysis of current state}{5}{section.2}
+\contentsline {subsection}{\numberline {2.1}Building virtual reality applications and experiences}{7}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Virtual reality on the~web}{8}{subsection.2.2}
+\contentsline {section}{\numberline {3}Technologies and tools for development}{9}{section.3}
+\contentsline {subsection}{\numberline {3.1}JavaScript}{9}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}NPM}{10}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Three.js}{11}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}A-Frame}{11}{subsection.3.4}
+\contentsline {subsubsection}{\numberline {3.4.1}JavaScript and Aframe}{12}{subsubsection.3.4.1}
+\contentsline {subsubsection}{\numberline {3.4.2}Entity-Component System}{12}{subsubsection.3.4.2}
+\contentsline {subsubsection}{\numberline {3.4.3}Component Ecosystem}{14}{subsubsection.3.4.3}
+\contentsline {subsubsection}{\numberline {3.4.4}A-Frame Inspector}{14}{subsubsection.3.4.4}
+\contentsline {subsubsection}{\numberline {3.4.5}Device and Platform Support}{15}{subsubsection.3.4.5}
+\contentsline {subsection}{\numberline {3.5}Math.js}{16}{subsection.3.5}
+\contentsline {subsection}{\numberline {3.6}React}{16}{subsection.3.6}
+\contentsline {subsection}{\numberline {3.7}Flux}{16}{subsection.3.7}
+\contentsline {subsubsection}{\numberline {3.7.1}Structure and Data Flow in Flux architecture}{17}{subsubsection.3.7.1}
+\contentsline {subsection}{\numberline {3.8}Redux}{19}{subsection.3.8}
+\contentsline {subsubsection}{\numberline {3.8.1}Three Principles of Redux}{20}{subsubsection.3.8.1}
+\contentsline {subsection}{\numberline {3.9}Webpack}{21}{subsection.3.9}
+\contentsline {section}{\numberline {4}Conceptualisation and design}{23}{section.4}
+\contentsline {subsection}{\numberline {4.1}Inputs and objections}{23}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Functionality planning}{24}{subsection.4.2}
+\contentsline {section}{\numberline {5}Implementation of virtual reality application}{26}{section.5}
+\contentsline {subsection}{\numberline {5.1}Project initialization}{26}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Installing JavaScript packages}{27}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}NPM scripts}{29}{subsection.5.3}
+\contentsline {subsection}{\numberline {5.4}Project structure}{30}{subsection.5.4}
+\contentsline {subsection}{\numberline {5.5}Webpack configuration}{31}{subsection.5.5}
+\contentsline {subsection}{\numberline {5.6}Webpack development server}{31}{subsection.5.6}
+\contentsline {subsection}{\numberline {5.7}Setting up Redux for application state management}{31}{subsection.5.7}
+\contentsline {subsection}{\numberline {5.8}Combining A-Frame and React}{34}{subsection.5.8}
+\contentsline {subsection}{\numberline {5.9}A-Frame scene}{35}{subsection.5.9}
+\contentsline {subsection}{\numberline {5.10}Camera component}{36}{subsection.5.10}
+\contentsline {subsection}{\numberline {5.11}Sky component}{37}{subsection.5.11}
+\contentsline {subsection}{\numberline {5.12}Plane component}{38}{subsection.5.12}
+\contentsline {subsection}{\numberline {5.13}Lights component}{39}{subsection.5.13}
+\contentsline {subsection}{\numberline {5.14}Text component}{39}{subsection.5.14}
+\contentsline {subsection}{\numberline {5.15}Calculator component}{40}{subsection.5.15}
+\contentsline {subsubsection}{\numberline {5.15.1}Action types}{40}{subsubsection.5.15.1}
+\contentsline {subsubsection}{\numberline {5.15.2}Action creators}{41}{subsubsection.5.15.2}
+\contentsline {subsubsection}{\numberline {5.15.3}Initial state}{41}{subsubsection.5.15.3}
+\contentsline {subsubsection}{\numberline {5.15.4}Reducer function}{42}{subsubsection.5.15.4}
+\contentsline {subsubsection}{\numberline {5.15.5}Higher-order component}{43}{subsubsection.5.15.5}
+\contentsline {subsubsection}{\numberline {5.15.6}Presentational component}{44}{subsubsection.5.15.6}
+\contentsline {subsection}{\numberline {5.16}CalcButton component}{45}{subsection.5.16}
+\contentsline {subsection}{\numberline {5.17}ParametrizedFunction component}{46}{subsection.5.17}
+\contentsline {subsubsection}{\numberline {5.17.1}Action types}{47}{subsubsection.5.17.1}
+\contentsline {subsubsection}{\numberline {5.17.2}Action creators}{47}{subsubsection.5.17.2}
+\contentsline {subsubsection}{\numberline {5.17.3}Initial state}{48}{subsubsection.5.17.3}
+\contentsline {subsubsection}{\numberline {5.17.4}Reducer function}{48}{subsubsection.5.17.4}
+\contentsline {subsubsection}{\numberline {5.17.5}Higher-order component}{49}{subsubsection.5.17.5}
+\contentsline {subsubsection}{\numberline {5.17.6}Presentational component}{50}{subsubsection.5.17.6}
+\contentsline {subsection}{\numberline {5.18}FunctionBox component}{51}{subsection.5.18}
+\contentsline {subsubsection}{\numberline {5.18.1}Action types}{51}{subsubsection.5.18.1}
+\contentsline {subsubsection}{\numberline {5.18.2}Action creators}{51}{subsubsection.5.18.2}
+\contentsline {subsubsection}{\numberline {5.18.3}Initial state}{51}{subsubsection.5.18.3}
+\contentsline {subsubsection}{\numberline {5.18.4}Reducer function}{52}{subsubsection.5.18.4}
+\contentsline {subsubsection}{\numberline {5.18.5}Higher-order component}{52}{subsubsection.5.18.5}
+\contentsline {subsubsection}{\numberline {5.18.6}Presentational component}{53}{subsubsection.5.18.6}
+\contentsline {subsection}{\numberline {5.19}SettingsPanel component}{54}{subsection.5.19}
+\contentsline {subsubsection}{\numberline {5.19.1}Action types}{55}{subsubsection.5.19.1}
+\contentsline {subsubsection}{\numberline {5.19.2}Action creators}{55}{subsubsection.5.19.2}
+\contentsline {subsubsection}{\numberline {5.19.3}Initial state}{56}{subsubsection.5.19.3}
+\contentsline {subsubsection}{\numberline {5.19.4}Reducer function}{56}{subsubsection.5.19.4}
+\contentsline {subsubsection}{\numberline {5.19.5}Higher-order component}{57}{subsubsection.5.19.5}
+\contentsline {subsubsection}{\numberline {5.19.6}Presentational component}{58}{subsubsection.5.19.6}
+\contentsline {subsection}{\numberline {5.20}Hand controller components}{59}{subsection.5.20}
+\contentsline {subsection}{\numberline {5.21}AttentionBox component}{61}{subsection.5.21}
+\contentsline {subsection}{\numberline {5.22}Adding components into A-Frame scene}{61}{subsection.5.22}
+\contentsline {subsection}{\numberline {5.23}Building and deploying the application to web hosting}{62}{subsection.5.23}
+\contentsline {section}{\numberline {6}Conclusion}{64}{section.6}
+\contentsline {section}{\hbox to\@tempdima {\hfil }{Bibliography}}{66}{section*.8}
+\contentsline {section}{\hbox to\@tempdima {\hfil }Appendices}{68}{section*.9}
+\contentsline {section}{\hbox to\@tempdima {\hfil }Appendix A}{69}{section*.10}
+\contentsline {section}{\hbox to\@tempdima {\hfil }Appendix B}{74}{section*.17}

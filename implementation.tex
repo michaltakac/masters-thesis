@@ -153,254 +153,19 @@ All of development, testing, bundling and deployment tasks are automated with \t
 Webpack is used as a tool to build JavaScript modules in MathworldVR application. It simplifies development workflow by quickly constructing a dependency graph of JavaScript application and bundling them in the right order. Our webpack configuration is defined in \texttt{webpack.config.js} and includes optimisations to the code like minification, obfuscation or splitting vendor/CSS/JavaScript code for production build. It also includes the configuration of Babel transpiler, which transpiles ES6/ES7 code to ES5, supported by all modern browsers.
 
 \subsection{Webpack development server}
-Development server configuration is defined in \texttt{server.js}. To start the server, \texttt{npm start} command is used from command line.  To properly serve the application
-
-\begin{lstlisting}
-const ip = '127.0.0.1';
-const port = 3000;
-
-new WebpackDevServer(webpack(config), {
-  publicPath: '/',
-  hot: true,
-  host: ip,
-  stats: false,
-  historyApiFallback: true,
-  contentBase: 'public',
-}).listen(port, ip, (err) => {
-  if (err) {
-    return console.log(err);
-  }
-
-  console.log(`Listening at http://${ip}:${port}`);
-});
-\end{lstlisting}
+Development server configuration is defined in \texttt{server.js}. To start the server, \texttt{npm start} command is used from command line.
 
 \begin{figure}[ht!]
 \centering
-\includegraphics[width=0.6\textwidth]{npm-start}
-\caption{Development server is running.}
+\includegraphics[width=0.9\textwidth]{npm-start}
+\caption{Started development server.}
 \label{r:63}
 \end{figure}
 
 \subsection{Setting up Redux for application state management}
-\begin{itemize}
-\item{Actions}
-\item{Reducers}
-\item{Store}
-\end{itemize}
+In Redux, all the application state is stored as a single object. We need to think of its shape before writing any code. In MathworldVR, there are 5 main "features" -  \texttt{calculator}, interactable \texttt{function box} with grid, inside which resides the \texttt{parametric function} handling 3D visualization and \texttt{settings} for this visualization, represented by interactive settings panel. Each of those has it's own state. These are combined together into one, global state, including additional \texttt{user} state that represents user position and \texttt{ui} state that represents traditional 2D user interface behaviour, like the visibility of information panel displayed after MathworldVR page is rendered in browser. For each feature and additional state, one Reducer function exists and by using reducer composition, all reducers are combined together into one, root reducer. Code for reducer composition is defined in \path{src/reducers/index.js}.
 
-\subsubsection{Initial state}
-In Redux, all the application state is stored as a single object. It's a good idea to think of its shape before writing any code.
-
-\subsubsection{Actions}
-Actions are payloads of information that send data from your application to your store. They are the only source of information for the store. You send them to the store using store.dispatch().
-
-Actions are plain JavaScript objects. Actions must have a type property that indicates the type of action being performed. Types should typically be defined as string constants.
-
-\subsubsection{Action creators}
-Action creators are functions that create actions. In Redux, action creators return an action. It makes them portable and easy to test.
-
-
-\begin{lstlisting}
-export const calculatorWriteText = (text) => ({
-    type: CALCULATOR_WRITE_TEXT,
-    text
-})
-
-export const calculatorBackspace = () => ({
-    type: CALCULATOR_BACKSPACE
-})
-
-export const calculatorClearText = () => ({
-    type: CALCULATOR_CLEAR_TEXT
-})
-\end{lstlisting}
-
-
-\begin{lstlisting}
-export const functionBoxSetPosition = (position) => ({
-    type: FUNCTION_BOX_SET_POSITION,
-    position
-})
-\end{lstlisting}
-
-
-\begin{lstlisting}
-export const parametricFunctionSetEquation = (equation) => ({
-    type: PARAMETRIC_FUNCTION_SET_EQUATION,
-    equation
-})
-\end{lstlisting}
-
-
-\begin{lstlisting}
-export const settingsSetXMin = (xMin) => ({
-    type: SETTINGS_SET_X_MIN,
-    xMin
-})
-
-export const settingsSetYMin = (yMin) => ({
-    type: SETTINGS_SET_Y_MIN,
-    yMin
-})
-
-export const settingsSetZMin = (zMin) => ({
-    type: SETTINGS_SET_Z_MIN,
-    zMin
-})
-
-export const settingsSetXMax = (xMax) => ({
-    type: SETTINGS_SET_X_MAX,
-    xMax
-})
-
-export const settingsSetYMax = (yMax) => ({
-    type: SETTINGS_SET_Y_MAX,
-    yMax
-})
-
-export const settingsSetZMax = (zMax) => ({
-    type: SETTINGS_SET_Z_MAX,
-    zMax
-})
-
-export const settingsSetSegments = (segments) => ({
-    type: SETTINGS_SET_SEGMENTS,
-    segments
-})
-
-export const settingsSetFunctionColor = (functionColor) => ({
-    type: SETTINGS_SET_FUNCTION_COLOR,
-    functionColor
-})
-\end{lstlisting}
-
-
-\begin{lstlisting}
-export const uiAttentionboxToggle = () => ({
-    type: UI_ATTENTIONBOX_TOGGLE
-})
-\end{lstlisting}
-
-
-\begin{lstlisting}
-export const userSetPosition = (position) => ({
-    type: USER_SET_POSITION,
-    position
-})
-\end{lstlisting}
-
-\subsubsection{Reducers}
-Actions describe the fact that something happened, but don't specify how the application's state changes in response. This is the job of reducers.
-
-The reducer is a pure function that takes the previous state and an action, and returns the next state.
-
-
-\begin{lstlisting}
-(previousState, action) => newState
-\end{lstlisting}
-
-It's called a reducer because it's the type of function you would pass to Array.prototype.reduce(reducer, initialValue). It's very important that the reducer stays pure. Things you should never do inside a reducer:
-
-\begin{itemize}
-\item{Mutate its arguments.}
-\item{Perform side effects like API calls and routing transitions.}
-\item{Call non-pure functions, e.g. Date.now() or Math.random().}
-\end{itemize}
-
-Reducer must be pure. Given the same arguments, it should calculate the next state and return it. No surprises, side effects, API calls or mutations, just a calculation.
-
-
-\begin{lstlisting}[caption={\textsl{functionBox} reducer.},captionpos=b]
-export default (state = initialState, action) => {
-  switch (action.type) {
-    case ActionTypes.FUNCTION_BOX_SET_POSITION:
-      return { ...state, position: action.position }
-    default: return state
-  }
-}
-\end{lstlisting}
-
-parametricFunction reducer:
-
-
-\begin{lstlisting}
-export default (state = initialState, action) => {
-  switch (action.type) {
-    case ActionTypes.PARAMETRIC_FUNCTION_SET_EQUATION:
-      return { ...state, equation: action.equation }
-    default: return state
-  }
-}
-\end{lstlisting}
-
-settings reducer:
-
-
-\begin{lstlisting}
-export default (state = initialState, action) => {
-  switch (action.type) {
-    case ActionTypes.SETTINGS_SET_X_MIN:
-      return { ...state, xMin: action.xMin }
-    case ActionTypes.SETTINGS_SET_Y_MIN:
-      return { ...state, yMin: action.yMin }
-    case ActionTypes.SETTINGS_SET_Z_MIN:
-      return { ...state, zMin: action.zMin }
-    case ActionTypes.SETTINGS_SET_X_MAX:
-      return { ...state, xMax: action.xMax }
-    case ActionTypes.SETTINGS_SET_Y_MAX:
-      return { ...state, yMax: action.yMax }
-    case ActionTypes.SETTINGS_SET_Z_MAX:
-      return { ...state, zMax: action.zMax }
-    case ActionTypes.SETTINGS_SET_Z_MAX:
-      return { ...state, zMax: action.zMax }
-    case ActionTypes.SETTINGS_SET_SEGMENTS:
-      return { ...state, segments: action.segments }
-    case ActionTypes.SETTINGS_SET_FUNCTION_COLOR:
-      return { ...state, functionColor: action.functionColor }
-    default: return state
-  }
-}
-\end{lstlisting}
-
-ui reducer:
-
-
-\begin{lstlisting}
-export default (state = initialState, action) => {
-  switch (action.type) {
-    case ActionTypes.UI_ATTENTIONBOX_TOGGLE:
-      return { ...state, attentionBoxVisible: !state.attentionBoxVisible }
-    default: return state
-  }
-}
-\end{lstlisting}
-
-user reducer:
-
-
-\begin{lstlisting}
-export default (state = initialState, action) => {
-  switch (action.type) {
-    case ActionTypes.USER_SET_POSITION:
-      return { ...state, position: action.position }
-    default: return state
-  }
-}
-\end{lstlisting}
----
-
-Note that:
-
-\begin{itemize}
-\item{We don't mutate the state. We create a copy with ES6 spread operator "...".}
-\item{We return the previous state in the default case. It's important to return the previous state for any unknown action.}
-\end{itemize}
-
-Then we join all reducers into one, root reducer which we export from index.js:
-
-
-\begin{lstlisting}
+\begin{lstlisting}[caption={Reducers composition code.},captionpos=b]
 import { combineReducers } from 'redux'
 import calculator from './calculator'
 import functionBox from './functionBox'
@@ -419,82 +184,27 @@ const rootReducer = combineReducers({
 export default rootReducer
 \end{lstlisting}
 
-combineReducers() generates a function that calls our reducers with the slices of state selected according to their keys, and combining their results into a single object again.
+\texttt{combineReducers()} method generates a function that calls all reducers with the slices of state selected according to their keys, and combining their results into a single object again.
 
-\subsubsection{Store}
+Each reducer is defined in it's own file that also includes the \texttt{initialState} object, which is passed into reducer function as a first argument, alongside action as a second argument. The reducer is a pure function that takes the previous state and an action, and returns the next state.
+
+Actions are payloads of information that send data from application to Redux store. describe the fact that something happened, but don't specify how the application's state changes in response - this is the job of reducers. They are the only source of information for the store. To trigger an action, they must be dispatched using \texttt{store.dispatch()} method. Actions are plain JavaScript objects that must have a type property, indicating the type of action being performed. Types should typically be defined as string constants. Action creators are functions that create actions and returns them which makes them portable and easy to test. They are defined in \path{src/actions/index.js}.
+
 The Store is the object that brings actions and reducers together. The store has the following responsibilities:
 
 \begin{itemize}
 \item{Holds application state.}
-\item{Allows access to state via getState().}
-\item{Allows state to be updated via dispatch(action).}
-\item{Registers listeners via subscribe(listener).}
-\item{Handles unregistering of listeners via the function returned by subscribe(listener).}
+\item{Allows access to state via \texttt{getState()}.}
+\item{Allows state to be updated via \texttt{dispatch(action)}.}
+\item{Registers listeners via \texttt{subscribe(listener)}.}
+\item{Handles unregistering of listeners via the function returned by \textttsubscribe(listener)}.}
 \end{itemize}
 
 It's important to note that Redux applications only have a single store. When we want to split the data handling logic, we'll use reducer composition instead of multiple stores.
 
-Redux Store used in development:
+Store configuration code for development is defined in \path{src/store/configureStore.dev.js}, which includes hot-reloading of reducers and action logger For production build, different store configuration is defined in \path{src/store/configureStore.prod.js}. Usage of correct configuration is determined by \texttt{NODE\char`_ENV} environment variable.
 
-
-\begin{lstlisting}
-import { createStore, applyMiddleware, compose } from 'redux'
-import thunk from 'redux-thunk'
-import createLogger from 'redux-logger'
-import rootReducer from '../reducers'
-
-const logger = createLogger({
-  collapsed: true,
-  duration: true,
-})
-
-const configureStore = initialState => {
-  const hasWindow = typeof window !== 'undefined'
-
-  const store = createStore(
-    rootReducer,
-    initialState,
-    compose(
-      applyMiddleware(thunk, logger),
-      hasWindow && window.devToolsExtension ? window.devToolsExtension() : f => f
-    )
-  )
-
-  if (module.hot) {
-    // Enable Webpack hot module replacement for reducers
-    module.hot.accept('../reducers', () => {
-      const nextRootReducer = require('../reducers').default
-      store.replaceReducer(nextRootReducer)
-    })
-  }
-
-  return store
-}
-
-export default configureStore
-\end{lstlisting}
-
-Redux Store used in production:
-
-
-\begin{lstlisting}
-import { createStore, applyMiddleware } from 'redux'
-import thunk from 'redux-thunk'
-import rootReducer from '../reducers'
-
-const configureStore = initialState => createStore(
-  rootReducer,
-  initialState,
-  applyMiddleware(thunk)
-)
-
-export default configureStore
-\end{lstlisting}
-
-We'll also create additional configureStore.js file in which we'll iimplement conditional switching between Store for development and production according to NODE_ENV variable used for distinguishing between different environments:
-
-
-\begin{lstlisting}
+\begin{lstlisting}[caption={Loading store configuration dynamically.},captionpos=b]
 if (process.env.NODE_ENV === 'production') {
   module.exports = require('./configureStore.prod')
 } else {
@@ -502,10 +212,21 @@ if (process.env.NODE_ENV === 'production') {
 }
 \end{lstlisting}
 
+\subsection{Combining A-Frame and React}
+A-Frame framework is built on top of the DOM, thus web library such as React can be put cleanly on top of A-Frame. \cite{aframe-react}
+
+A-Frame is an entity-component-system (ECS) framework exposed through HTML. ECS is a pattern used in game development that favors composability over inheritance, which is more naturally suited to 3D scenes where objects are built of complex appearance, behavior, and functionality. \cite{aframe-react}
+
+In A-Frame, HTML attributes map to components which are composable modules that are plugged into \texttt{<a-entity>}s to attach appearance, behavior, and functionality. \cite{aframe-react}
+
+MathworldVR is using \texttt{aframe-react} module as a thin layer on top of A-Frame to bridge with React. It passes React props directly to A-Frame using refs and \texttt{\justify .setAttribute()}, bypassing the DOM. This works since A-Frame's \texttt{\justify .setAttribute()} is able to take non-string data such as objects, arrays, or elements and synchronously modify underlying 3D scene graph. \cite{aframe-react}
+
+With \texttt{aframe-react}, we get the the 3D and VR architecture of A-Frame, and the view and state ergonomics of React. React can be used to bind application and state data to the values of A-Frame components. And we still have access to all the features and performance of A-Frame as well as A-Frame's community component ecosystem. \cite{aframe-react}
+
 \subsection{A-Frame scene}
+3D scene initialization code is defined in \path{src/components/VRScene/index.js} by implementing the \texttt{<a-scene>} primitive from A-Frame API. It creates \texttt{THREE.Scene()} instance, sets the WebGL renderer by creating new \texttt{THREE.WebGLRenderer()} instance and combines them into a render loop. Abstractions like these makes the A-Frame framework a great WebVR development tool.
 
-
-\begin{lstlisting}
+\begin{lstlisting}[caption={\textsl{VRScene} component.},captionpos=b]
 export default class VRScene extends React.Component {
   render() {
     return (
@@ -517,8 +238,7 @@ export default class VRScene extends React.Component {
 }
 \end{lstlisting}
 
-We need to import additional A-Frame-specific libraries at the start of VRScene file:
-
+Additional A-Frame-specific libraries are loaded at the start of VRScene file:
 
 \begin{lstlisting}
 // A-frame Components by community
@@ -531,8 +251,7 @@ import physics from 'aframe-physics-system'
 import 'lib'
 \end{lstlisting}
 
-Here, we're loading aframe-physics-system which has specific initialization requirement - we need to call a function physics.registerAll() from within our scene after it's loaded. That means we need to put it inside componentWillMount function, which is React's standard lifecycle method:
-
+Here, we're loading \texttt{aframe-physics-system} which has specific initialization requirement - we need to call a function \texttt{physics.registerAll()} from within VRcene after it's loaded. That means we need to put it inside \texttt{componentWillMount()} function, which is React's standard lifecycle method:
 
 \begin{lstlisting}
 componentWillMount() {
@@ -541,8 +260,7 @@ componentWillMount() {
 }
 \end{lstlisting}
 
-To use aframe-physics-system, we add physics="gravity: 0" to <a-scene>:
-
+To use \texttt{aframe-physics-system}, \texttt{physics="gravity: 0"} is added to \texttt{<a-scene>} primitive:
 
 \begin{lstlisting}
 <a-scene physics="gravity: 0">
@@ -551,7 +269,7 @@ To use aframe-physics-system, we add physics="gravity: 0" to <a-scene>:
 \end{lstlisting}
 
 \subsection{Camera component}
-Camera component is implementing the \texttt{camera} from A-Frame API which is an abstraction over creation of a new \texttt{THREE.PerspectiveCamera} instance. Any additional properties are then passed into the main entity. \texttt{Camera} component is defined in \texttt{src/components/Camera/index.js}.
+Camera component is implementing the \texttt{camera} from A-Frame API which is an abstraction over creation of a new \texttt{THREE.PerspectiveCamera} instance. Any additional properties are then passed into the main entity. \texttt{Camera} component is defined in \path{src/components/Camera/index.js}.
 
 \begin{lstlisting}[caption={\textsl{Camera} component code.},captionpos=b]
 import React from 'react'
@@ -567,7 +285,7 @@ export default Camera
 \end{lstlisting}
 
 \subsection{Sky component}
-Sky component is implementing the \texttt{geometry} and \texttt{material} from A-Frame API. It's used to achieve the feeling of a sky around the user. \texttt{geometry.primitive} property is set to \texttt{'sphere'} with \texttt{geometry.radius} of 30 meters and \texttt{sky.jpg} texture prepared for a 360-degree image viewer is added to \texttt{material.src} property, pointing to an URL where image is stored. Any additional properties are then passed into the main entity. \texttt{Sky} component is defined in \texttt{src/components/Sky/index.js}.
+Sky component is implementing the \texttt{geometry} and \texttt{material} from A-Frame API. It's used to achieve the feeling of a sky around the user. \texttt{geometry.primitive} property is set to \texttt{'sphere'} with \texttt{geometry.radius} of 30 meters and \texttt{sky.jpg} texture prepared for a 360-degree image viewer is added to \texttt{material.src} property, pointing to an URL where image is stored. Any additional properties are then passed into the main entity. \texttt{Sky} component is defined in \path{src/components/Sky/index.js}.
 
 \begin{lstlisting}[caption={\textsl{Sky} component code.},captionpos=b]
 import React from 'react'
@@ -587,7 +305,7 @@ export default Sky
 \end{lstlisting}
 
 \subsection{Plane component}
-Plane component is implementing the \texttt{geometry} and \texttt{material} from A-Frame API. It's used as a floor under the user. \texttt{geometry.primitive} property is set to \texttt{'circle'} with \texttt{geometry.radius} of 12 meters and \texttt{floor.jpg} texture is added to \texttt{material.src} property, pointing to an URL where image is stored. Main entity is rotated 90-degrees around the X-axis. To accept light from Lights component, \texttt{material.shader} property is set to \texttt{'flat'}. Any additional properties are then passed into the main entity. \texttt{Plane} component is defined in \texttt{src/components/Plane/index.js}.
+Plane component is implementing the \texttt{geometry} and \texttt{material} from A-Frame API. It's used as a floor under the user. \texttt{geometry.primitive} property is set to \texttt{'circle'} with \texttt{geometry.radius} of 12 meters and \texttt{floor.jpg} texture is added to \texttt{material.src} property, pointing to an URL where image is stored. Main entity is rotated 90-degrees around the X-axis. To accept light from Lights component, \texttt{material.shader} property is set to \texttt{'flat'}. Any additional properties are then passed into the main entity. \texttt{Plane} component is defined in \path{src/components/Plane/index.js}.
 
 \begin{lstlisting}[caption={\textsl{Plane} component code.},captionpos=b]
 import React from 'react'
@@ -609,7 +327,7 @@ export default Plane
 \end{lstlisting}
 
 \subsection{Lights component}
-\texttt{Lights} component is implementing the \texttt{light} from A-Frame API. It's used for lighting up the scene and main points of interest, such as FunctionBox, Calculator and SettingsPanel components. MathworldVR uses two types of light - \texttt{'point'} and \texttt{'hemisphere'}, grouped into single component. Light intensity is set with \texttt{intensity} property. \texttt{Lights} component is defined in \texttt{src/components/Lights/index.js}.
+\texttt{Lights} component is implementing the \texttt{light} from A-Frame API. It's used for lighting up the scene and main points of interest, such as FunctionBox, Calculator and SettingsPanel components. MathworldVR uses two types of light - \texttt{'point'} and \texttt{'hemisphere'}, grouped into single component. Light intensity is set with \texttt{intensity} property. \texttt{Lights} component is defined in \path{src/components/Lights/index.js}.
 
 \begin{lstlisting}[caption={\textsl{Lights} component code.},captionpos=b]
 import React from 'react'
@@ -629,12 +347,29 @@ export default Lights
 \end{lstlisting}
 
 \subsection{Text component}
+\texttt{Text} component is implementing the \texttt{text} from A-Frame API. It's used for displaying 2D text inside 3D environment. \texttt{Text} component is defined in \path{src/components/Text/index.js}.
 
-\subsection{CalcButton component}
+\begin{lstlisting}[caption={\textsl{Lights} component code.},captionpos=b]
+import React from 'react'
+import { Entity } from 'aframe-react'
+
+const Text = ({ align, color, letterSpacing, lineHeight, opacity, value, width, zOffset, ...props }) => {
+  return (
+    <Entity
+      text={{ value, width, align, letterSpacing, lineHeight, color, opacity, zOffset }}
+      {...props}
+    >
+      {props.children}
+    </Entity>
+  )
+}
+
+export default Text
+\end{lstlisting}
 
 \subsection{Calculator component}
 \subsubsection{Action types}
-Calculator action types are defined in \texttt{src/actions/index.js} as string constants and exported individually to ensure they can be imported in other files and also tested.
+Calculator action types are defined in \path{src/actions/index.js} as string constants and exported individually to ensure they can be imported in other files and also tested.
 
 \begin{lstlisting}[caption={\texttt{calculator} action types.},captionpos=b]
 export const CALCULATOR_WRITE_TEXT = 'CALCULATOR_WRITE_TEXT'
@@ -643,7 +378,7 @@ export const CALCULATOR_CLEAR_TEXT = 'CALCULATOR_CLEAR_TEXT'
 \end{lstlisting}
 
 \subsubsection{Action creators}
-Calculator's action creators are pure functions that return payloads of information about type of \texttt{CALCULATOR} action being dispatched and, if needed, also the data we want to send to Redux store. They are defined in \texttt{src/actions/index.js}
+Calculator's action creators are pure functions that return payloads of information about type of \texttt{CALCULATOR} action being dispatched and, if needed, also the data we want to send to Redux store. They are defined in \path{src/actions/index.js}
 
 \begin{lstlisting}[caption={Action for writing text to calculator display.},captionpos=b]
 export const calculatorWriteText = (text) => ({
@@ -665,7 +400,7 @@ export const calculatorClearText = () => ({
 \end{lstlisting}
 
 \subsubsection{Initial state}
-Calculator component's initial state is defined in \texttt{src/reducers/calculator/index.js} as a \texttt{initialState} object.
+Calculator component's initial state is defined in \path{src/reducers/calculator/index.js} as a \texttt{initialState} object.
 
 \begin{lstlisting}[caption={Initial state of a \textsl{calculator}.},captionpos=b]
 const initialState = {
@@ -674,9 +409,9 @@ const initialState = {
 \end{lstlisting}
 
 \subsubsection{Reducer function}
-Reducer function for \texttt{Calculator} component is defined in \texttt{src/reducers/calculator/index.js}. From this file it's exported as a default function that takes state (with initialState as a default value) and action as its arguments and returns new state according to \texttt{CALCULATOR} actions. Possible \texttt{ActionTypes} are conditionally checked with JavaScript's \texttt{switch} statement for a better code readability.
+Reducer function for \texttt{Calculator} component is defined in \path{src/reducers/calculator/index.js}. From this file it's exported as a default function that takes state (with initialState as a default value) and action as its arguments and returns new state according to \texttt{CALCULATOR} actions. Possible \texttt{ActionTypes} are conditionally checked with JavaScript's \texttt{switch} statement for a better code readability.
 
-\begin{lstlisting}[caption={Addition of text to \texttt{state.calculator.displayText} when action of type \texttt{CALCULATOR_WRITE_TEXT} is dispatched.},captionpos=b]
+\begin{lstlisting}[caption={Addition of text to \texttt{state.calculator.displayText}.},captionpos=b]
 export default (state = initialState, action) => {
   switch (action.type) {
     // ...
@@ -688,7 +423,7 @@ export default (state = initialState, action) => {
 }
 \end{lstlisting}
 
-\begin{lstlisting}[caption={Remove one character from  \texttt{state.calculator.displayText} when action of type \texttt{CALCULATOR_BACKSPACE} is dispatched.},captionpos=b]
+\begin{lstlisting}[caption={Remove one character from  \texttt{state.calculator.displayText}.},captionpos=b]
 export default (state = initialState, action) => {
   switch (action.type) {
     // ...
@@ -700,7 +435,7 @@ export default (state = initialState, action) => {
 }
 \end{lstlisting}
 
-\begin{lstlisting}[caption={Clear the \texttt{state.calculator.displayText} when action of type \texttt{CALCULATOR_CLEAR_TEXT} is dispatched.},captionpos=b]
+\begin{lstlisting}[caption={Clear the \texttt{state.calculator.displayText}.},captionpos=b]
 export default (state = initialState, action) => {
   switch (action.type) {
     // ...
@@ -713,7 +448,7 @@ export default (state = initialState, action) => {
 \end{lstlisting}
 
 \subsubsection{Higher-order component}
-State and actions that Calculator component needs to function properly are mapped to properties in Calculator container, also called "higher-order component", because it's "aware" of application's state that is mapped into it. Code for Calculator higher-order component creation is defined in \texttt{src/containers/Calculator/index.js}.
+State and actions that Calculator component needs to function properly are mapped to properties in Calculator container, also called "higher-order component", because it's "aware" of application's state that is mapped into it. Code for Calculator higher-order component creation is defined in \path{src/containers/Calculator/index.js}.
 
 \begin{lstlisting}[caption={Function to map \texttt{calculator} state to component properties.},captionpos=b]
 const mapStateToProps = (state) => ({
@@ -738,9 +473,9 @@ export default connect(mapStateToProps, mapDispatchToProps)(Calculator)
 \end{lstlisting}
 
 \subsubsection{Presentational component}
-Presentational Calculator component is implementing the \texttt{geometry} and \texttt{material} from A-Frame API. It's shape is determined by \texttt{geometry.primitive} which is set to \texttt{'box'} with width of \texttt{0.88} meters, height of \texttt{0.65} meters and depth of \texttt{0.01} meters. By default it's not moveable to ensure its position central to the MathworldVR experience. Properties passed into the component as function attributes includes state and dispatchable action that was mapped in it's higher-order component. \texttt{Calculator} code is defined in \texttt{src/components/Calculator/index.js}. Code preview displayed here doesn't include the CalcButton components, but they're utilizing the \texttt{writeText}, \texttt{backspace} and \texttt{clearText} actions. They will be explained in next section.
+Presentational Calculator component is implementing the \texttt{geometry} and \texttt{material} from A-Frame API. It's shape is determined by \texttt{geometry.primitive} which is set to \texttt{'box'} with width of \texttt{0.88} meters, height of \texttt{0.65} meters and depth of \texttt{0.01} meters. By default it's not moveable to ensure its position central to the MathworldVR experience. Properties passed into the component as function attributes includes state and dispatchable action that was mapped in it's higher-order component. \texttt{Calculator} code is defined in \path{src/components/Calculator/index.js}. Code preview displayed here doesn't include the CalcButton components, but they're utilizing the \texttt{writeText}, \texttt{backspace} and \texttt{clearText} actions. They are explained in next section.
 
-\begin{lstlisting}[caption={Presentational \texttt{Calculator} component code.},captionpos=b]
+\begin{lstlisting}[caption={Presentational \textsl{Calculator} component code.},captionpos=b]
 const Calculator = ({ displayText, writeText, backspace, clearText, updateEquation }) => {
   return (
     <Entity
@@ -749,92 +484,26 @@ const Calculator = ({ displayText, writeText, backspace, clearText, updateEquati
     >
       { /* Calculator display */ }
       <Text value={displayText} />
-      
       { /* --- BUTTONS --- */ }
       { /* ... */ }
-      
     </Entity>
   )
 }
       
 \end{lstlisting}
 
-
 \subsection{CalcButton component}
+\texttt{CalcButton} is interactable component that is reacting to VR hand controllers interactions. When hand controller intersects with CalcButton in 3D environment, it fires an \texttt{hover-start} event, which starts the chain reaction of another two events by calling a \texttt{startInteraction()} method that fires Redux action passed to CalcButton as a property attribute and at the same time changes the depth and opacity of CalcButton. This is providing a visual cue - simulation of an actual click of a button on real calculator. After hand controller leaves the area of CalcButton, \texttt{hover-end} event is fired, initializing \texttt{endInteraction()} method which sets the depth and opacity back to default values. \texttt{CalcButton} component is defined in \path{src/components/CalcButton/index.js}.
 
-
-\begin{lstlisting}
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Entity } from 'aframe-react'
-import { Text } from 'components'
-
-export default class CalcButton extends React.Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      depth: 0.02,
-      opacity: 1,
-    }
-
-    this.startIntersection = this.startIntersection.bind(this)
-    this.endIntersection = this.endIntersection.bind(this)
-  }
-
-  startIntersection() {
-    const { actionToTrigger, value } = this.props
-    this.setState({ depth: 0, opacity: 0.2 })
-    actionToTrigger(value)
-  }
-
-  endIntersection() {
-    this.setState({ depth: 0.02, opacity: 1 })
-  }
-
-  render() {
-    const { id, position, width, height, buttonColor, text, textColor, textWidth } = this.props
-    const { depth, opacity } = this.state
-    return (
-      <Entity
-        id={id}
-        className="interactive"
-        geometry={{ primitive: 'box', height, width, depth }}
-        material={{ shader: 'flat', side: 'double', color: buttonColor, opacity }}
-        scale={{ x: 0.5, y: 0.5, z: 0.5 }}
-        position={position}
-        hoverable
-        clickable
-        events={{
-          'hover-start': this.startIntersection,
-          'hover-end': this.endIntersection,
-        }}
-      >
-        <Text
-          value={text}
-          color={textColor}
-          align="center"
-          zOffset={0.02}
-          width={textWidth}
-        />
-      </Entity>
-    )
-  }
-}
-\end{lstlisting}
-
-
-\subsection{Adding components together}
 \begin{figure}[ht!]
 \centering
-\includegraphics[width=0.6\textwidth]{calculator}
-\caption{Calculator component}
-\label{r:2}
+\includegraphics[width=0.7\textwidth]{calculator}
+\caption{\textsl{Calculator} with multiple \textsl{CalcButton} components.}
+\label{r:64}
 \end{figure}
 
 \subsection{ParametrizedFunction component}
-\subsubsection{Extending A-Frame API with parametrizedfunction component}
-
+First, the A-Frame API had to be extended with \texttt{parametricfunction} component:
 
 \begin{lstlisting}[caption={Registering new A-Frame component \texttt{'parametricfunction'}.},captionpos=b]
 AFRAME.registerComponent('parametricfunction', {
@@ -844,6 +513,8 @@ AFRAME.registerComponent('parametricfunction', {
   remove: function() {/* ... */},
 })
 \end{lstlisting}
+
+A-Frame components should have schema defined to ensure what data is passed into them. \texttt{parametricfunction}'s schema includes \texttt{equation}, \texttt{segments}, \texttt{xMin}, \texttt{xMax}, \texttt{yMin}, \texttt{yMax}, \texttt{zMin}, \texttt{zMax} and  \texttt{functionColor}, with their respective default values.
 
 \begin{lstlisting}[caption={\texttt{parametricfunction} A-Frame component schema with default values.},captionpos=b]
 schema: {
@@ -859,24 +530,16 @@ schema: {
 }
 \end{lstlisting}
 
-\begin{lstlisting}[caption={\texttt{parametricfunction} A-Frame component init function.},captionpos=b]
-init: function() {
-  const el = this.el;
-  const canvas = el.sceneEl.canvas;
-  // Wait for canvas to load.
-  if (!canvas) {
-    el.sceneEl.addEventListener('render-target-loaded', this.init.bind(this));
-    return;
-  }
-}
-\end{lstlisting}
+Main functions of \texttt{parametricfunction} A-Frame component are:
+\begin{itemize}
+\item{Parsing the equation passed into it with use of \texttt{Math.js} module and visualizing it in 3D environment, inside FunctionBox component that provides the grid.}
+\item{Updating the 3D visualization after settings in \texttt{SettingsPanel} changes.}
+\end{itemize}
 
-\begin{lstlisting}[caption={\texttt{parametricfunction} A-Frame component init function.},captionpos=b]
+\begin{lstlisting}[caption={Parsing of the equation.},captionpos=b]
 var equation = 'f(x,y) = ' + this.data.equation;
 var parser = math.parser();
-\end{lstlisting}
 
-\begin{lstlisting}[caption={\texttt{parametricfunction} A-Frame component init function.},captionpos=b]
 try {
   parser.eval(equation);
 } catch (error) {
@@ -884,26 +547,24 @@ try {
 }
 \end{lstlisting}
 
-\begin{lstlisting}[caption={\texttt{parametricfunction} A-Frame component init function.},captionpos=b]
+To get the parsed value as a function, \texttt{parser.get('f')} method is called:
+
+\begin{lstlisting}
 const f1 = parser.get('f');
 parser.clear();
 \end{lstlisting}
 
-\begin{lstlisting}[caption={\texttt{parametricfunction} A-Frame component init function.},captionpos=b]
-this.mainMaterial = new THREE.MeshBasicMaterial( { color: this.data.functionColor, side: THREE.DoubleSide } );
-this.wireframeMaterial = new THREE.MeshBasicMaterial( { color: 0x00008, wireframe: true, transparent: true } );
-this.functionMaterial = [ this.mainMaterial, this.wireframeMaterial ];
-\end{lstlisting}
+The code of \texttt{parametricfunction} A-Frame component implementation is defined in \path{src/lib/components/parametricfunction.js}
     
 \subsubsection{Action types}
-ParametricFunction action types are defined in \texttt{src/actions/index.js} as string constants and exported individually to ensure they can be imported in other files and also tested.
+ParametricFunction action types are defined in \path{src/actions/index.js} as string constants and exported individually to ensure they can be imported in other files and also tested.
 
 \begin{lstlisting}[caption={\texttt{parametricFunction} action types.},captionpos=b]
 export const PARAMETRIC_FUNCTION_SET_EQUATION = 'PARAMETRIC_FUNCTION_SET_EQUATION'
 \end{lstlisting}
 
 \subsubsection{Action creators}
-ParametricFunction's action creators are pure functions that return payloads of information about type of \texttt{PARAMETRIC_FUNCTION} action being dispatched and, if needed, also the data we want to send to Redux store. They are defined in \texttt{src/actions/index.js}
+ParametricFunction's action creators are pure functions that return payloads of information about type of \texttt{PARAMETRIC\char`_FUNCTION} action being dispatched and, if needed, also the data we want to send to Redux store. They are defined in \path{src/actions/index.js}
 
 \begin{lstlisting}[caption={Action for setting the function for 3D visualization.},captionpos=b]
 export const parametricFunctionSetEquation = (equation) => ({
@@ -913,7 +574,7 @@ export const parametricFunctionSetEquation = (equation) => ({
 \end{lstlisting}
 
 \subsubsection{Initial state}
-ParametricFunction component's initial state is defined in \texttt{src/reducers/parametrizedFunction/index.js} as a \texttt{initialState} object.
+ParametricFunction component's initial state is defined inside the  \path{src/reducers/parametrizedFunction/index.js} file as a \texttt{initialState} object.
 
 \begin{lstlisting}[caption={Initial state of a \textsl{calculator}.},captionpos=b]
 const initialState = {
@@ -922,9 +583,9 @@ const initialState = {
 \end{lstlisting}
 
 \subsubsection{Reducer function}
-Reducer function for \texttt{ParametricFunction} component is defined in \texttt{src/reducers/parametricFunction/index.js}. From this file it's exported as a default function that takes state (with initialState as a default value) and action as its arguments and returns new state according to \texttt{PARAMETRIC_FUNCTION} actions. Possible \texttt{ActionTypes} are conditionally checked with JavaScript's \texttt{switch} statement for a better code readability.
+Reducer function for \texttt{ParametricFunction} component is defined in \path{src/reducers/parametricFunction/index.js}. From this file it's exported as a default function that takes state (with initialState as a default value) and action as its arguments and returns new state according to \texttt{PARAMETRIC\char`_FUNCTION} actions. Possible \texttt{ActionTypes} are conditionally checked with JavaScript's \texttt{switch} statement for a better code readability.
 
-\begin{lstlisting}[caption={Update the \texttt{state.parametricFunction.equation} value with the new one from action payload when action of type \texttt{PARAMETRIC_FUNCTION_SET_EQUATION} is dispatched.},captionpos=b]
+\begin{lstlisting}[caption={Update the \texttt{state.parametricFunction.equation} value.},captionpos=b]
 export default (state = initialState, action) => {
   switch (action.type) {
     // ...
@@ -937,7 +598,7 @@ export default (state = initialState, action) => {
 \end{lstlisting}
 
 \subsubsection{Higher-order component}
-State and actions that ParametricFunction component needs to function properly are mapped to properties in ParametricFunction container - higher-order component. Code for ParametricFunction higher-order component creation is defined in \texttt{src/containers/ParametricFunction/index.js}.
+State and actions that ParametricFunction component needs to function properly are mapped to properties in ParametricFunction container - higher-order component. Code for ParametricFunction higher-order component creation is defined in \path{src/containers/ParametricFunction/index.js}.
 
 \begin{lstlisting}[caption={Function to map \texttt{parametricFunction}  and \texttt{settings} state to component properties.},captionpos=b]
 const mapStateToProps = (state) => ({
@@ -961,7 +622,7 @@ export default connect(mapStateToProps)(ParametricFunction)
 \end{lstlisting}
 
 \subsubsection{Presentational component}
-Presentational ParametricFunction component is implementing the \texttt{geometry} and \texttt{material} from A-Frame API. It's shape is determined by \texttt{geometry.primitive} which is set to \texttt{'box'} with width of \texttt{0.88} meters, height of \texttt{0.65} meters and depth of \texttt{0.01} meters. By default it's not moveable to ensure its position central to the MathworldVR experience. Properties passed into the component as function attributes includes state and dispatchable action that was mapped in it's higher-order component. \texttt{Calculator} code is defined in \texttt{src/components/Calculator/index.js}. Code preview displayed here doesn't include the CalcButton components, but they're utilizing the \texttt{writeText}, \texttt{backspace} and \texttt{clearText} actions. They will be explained in next section.
+Presentational ParametricFunction component is implementing the \texttt{\justify parametricfunction} from A-Frame API we extended. Properties passed into the component as function attributes includes state and dispatchable action that was mapped in it's higher-order component. \texttt{ParametricFunction} code is defined in \path{src/components/ParametricFunction/index.js}.
 
 \begin{lstlisting}[caption={Presentational \texttt{ParametricFunction} component code.},captionpos=b]
 const ParametricFuntion = ({ equation, segments, xMin, xMax, yMin, yMax, zMin, zMax, functionColor }) => {
@@ -985,9 +646,86 @@ const ParametricFuntion = ({ equation, segments, xMin, xMax, yMin, yMax, zMin, z
 }
 \end{lstlisting}
 
-\subsection{SettingsPanel component}
+\subsection{FunctionBox component}
+\subsubsection{Action types}
+FunctionBox action types are defined in \path{src/actions/index.js} as string constants and exported individually to ensure they can be imported in other files and also tested.
 
-We will register the datgui A-Frame component first. Inside the init method, we're creating the dat.guiVR instance and injecting it into the component element property:
+\begin{lstlisting}[caption={\texttt{functionBox} action types.},captionpos=b]
+export const FUNCTION_BOX_SET_POSITION = 'FUNCTION_BOX_SET_POSITION'
+\end{lstlisting}
+
+\subsubsection{Action creators}
+FunctionBox's action creators are pure functions that return payloads of information about type of \texttt{FUNCTION\char`_BOX} action being dispatched and, if needed, also the data we want to send to Redux store. They are defined in \path{src/actions/index.js}
+
+\begin{lstlisting}[caption={Action for setting function box position.},captionpos=b]
+export const functionBoxSetPosition = (position) => ({
+  type: FUNCTION_BOX_SET_POSITION,
+  position,
+})
+\end{lstlisting}
+
+\subsubsection{Initial state}
+\texttt{FunctionBox} component's initial state is defined in \path{src/reducers/functionBox/index.js} as a \texttt{initialState} object.
+
+\begin{lstlisting}[caption={Initial state of a \textsl{functionBox}.},captionpos=b]
+const initialState = {
+  position: { x: 0.65, y: 1.45, z: -1.03 },
+}
+\end{lstlisting}
+
+\subsubsection{Reducer function}
+Reducer function for \texttt{FunctionBox} component is defined in \path{src/reducers/functionBox/index.js}. From this file it's exported as a default function that takes state (with \texttt{initialState} as a default value) and \texttt{action} as its arguments and returns new state according to \texttt{FUNCTION\char`_BOX} actions. Possible \texttt{ActionTypes} are conditionally checked with JavaScript's \texttt{switch} statement for a better code readability.
+
+\begin{lstlisting}[caption={Updating the   \texttt{state.functionBox.position} value.},captionpos=b]
+export default (state = initialState, action) => {
+  switch (action.type) {
+    case ActionTypes.FUNCTION_BOX_SET_POSITION:
+      return { ...state, position: action.position }
+    default: return state
+  }
+}
+\end{lstlisting}
+
+\subsubsection{Higher-order component}
+State and actions that \texttt{FunctionBox} component needs to function properly are mapped to properties in Calculator container -  higher-order component. Code for FunctionBox higher-order component creation is defined in \path{src/containers/FunctionBox/index.js}.
+
+\begin{lstlisting}[caption={Function to map \texttt{functionBox} state to component properties.},captionpos=b]
+const mapStateToProps = (state) => ({
+  position: state.functionBox.position,
+})
+\end{lstlisting}
+
+\begin{lstlisting}[caption={Creation of \texttt{FunctionBox} higher-order component.},captionpos=b]
+import { connect } from 'react-redux'
+import { FunctionBox } from 'components'
+// ...
+export default connect(mapStateToProps, null)(FunctionBox)
+\end{lstlisting}
+
+\subsubsection{Presentational component}
+Presentational FunctionBox component is implementing the \texttt{geometry} and \texttt{material} from A-Frame API. It's shape is determined by \texttt{geometry.primitive} which is set to \texttt{'box'} with width of \texttt{4} meters, height of \texttt{4} meters and depth of \texttt{4} meters. By default it's scaled down by 80\%, but since this component is interactive, it can be stretched with hand controller interactions. It can also be moved around the 3D environment. \texttt{Position} property is passed into the component from higher-order component. \texttt{FunctionBox} code is defined in \path{src/components/FunctionBox/index.js}.
+
+\begin{lstlisting}[caption={Presentational \textsl{FunctionBox} component code.},captionpos=b]
+const FunctionBox = ({ position, ...props }) => (
+  <Entity
+    id="function-box"
+    className="interactive"
+    geometry="primitive: box; width: 4; height: 4; depth: 4;"
+    material="transparent: true; opacity: 0; shader: standard"
+    scale="0.2 0.2 0.2"
+    position={position}
+    grabbable
+    stretchable
+    dynamic-body
+    stop-flying
+  >
+    { props.children }
+  </Entity>
+)  
+\end{lstlisting}
+
+\subsection{SettingsPanel component}
+First, the A-Frame API has to be extended with \texttt{datgui} component. Inside its \texttt{init} method, the \texttt{dat.guiVR} instance is created and injected into the component element property:
 
 \begin{lstlisting}
 const gui = dat.GUIVR.create( this.data.name );
@@ -995,10 +733,10 @@ this.el.setObject3D('gui', gui );
 this.el.gui = gui;
 \end{lstlisting}
 
-To allow VR hand controllers interactions, we'll create bindInput method that will create event listeners for triggerdown, triggerup, gripdown and gripup events:
+To allow VR hand controllers interactions, \texttt{bindInput} method is used for creation of event listeners for \texttt{triggerdown}, \texttt{triggerup}, \texttt{gripdown} and \texttt{gripup} events:
 
 \begin{lstlisting}
-function bindInput( el, input ){
+function bindInput(el, input) {
   el.addEventListener('triggerdown', function() {
     input.pressed(true);
   });
@@ -1014,83 +752,147 @@ function bindInput( el, input ){
 }
 \end{lstlisting}
 
-Datgui component doesn't know about the VR hand controllers yet, thus we need to add them as an input objects into dat.guiVR instance:
+\subsubsection{Action types}
+SettingsPanel action types are defined in \path{src/actions/index.js} as string constants and exported individually to ensure they can be imported in other files and also tested.
 
+\begin{lstlisting}[caption={\texttt{settings} action types.},captionpos=b]
+export const SETTINGS_SET_X_MIN = 'SETTINGS_SET_X_MIN'
+export const SETTINGS_SET_Y_MIN = 'SETTINGS_SET_Y_MIN'
+export const SETTINGS_SET_Z_MIN = 'SETTINGS_SET_Z_MIN'
+export const SETTINGS_SET_X_MAX = 'SETTINGS_SET_X_MAX'
+export const SETTINGS_SET_Y_MAX = 'SETTINGS_SET_Y_MAX'
+export const SETTINGS_SET_Z_MAX = 'SETTINGS_SET_Z_MAX'
+export const SETTINGS_SET_SEGMENTS = 'SETTINGS_SET_SEGMENTS'
+export const SETTINGS_SET_FUNCTION_COLOR = 'SETTINGS_SET_FUNCTION_COLOR'
+\end{lstlisting}
 
-\begin{lstlisting}
-const controllerRightEl = this.data.controllerRight;
-if (controllerRightEl){
-  const right = dat.GUIVR.addInputObject(controllerRightEl.object3D);
-  scene.add(right);
-  bindInput(controllerRightEl, right);
-}
+\subsubsection{Action creators}
+SettingsPanel's action creators are pure functions that return payloads of information about type of \texttt{SETTINGS} action being dispatched and, if needed, also the data we want to send to Redux store. They are defined in \path{src/actions/index.js}
 
-const controllerLeftEl = this.data.controllerLeft;
-if (controllerLeftEl){
-  const left = dat.GUIVR.addInputObject( controllerLeftEl.object3D);
-  scene.add(left);
-  bindInput(controllerLeftEl, left);
+\begin{lstlisting}[caption={Action for setting fnction segments.},captionpos=b]
+export const settingsSetSegments = (segments) => ({
+  type: SETTINGS_SET_SEGMENTS,
+  segments,
+})
+\end{lstlisting}
+
+\subsubsection{Initial state}
+SettingsPanel component's initial state is defined in \path{src/reducers/settings/index.js} as a \texttt{initialState} object.
+
+\begin{lstlisting}[caption={Initial state of a \textsl{calculator}.},captionpos=b]
+const initialState = {
+  xMin: -1,
+  yMin: -1,
+  zMin: -4,
+  xMax: 1,
+  yMax: 1,
+  zMax: 4,
+  segments: 30,
+  functionColor: '#bada55',
 }
 \end{lstlisting}
 
-After the datgui component, we'll create 
+\subsubsection{Reducer function}
+Reducer function for \texttt{SettingsPanel} component is defined in \path{src/reducers/settings/index.js}. From this file it's exported as a default function that takes state (with initialState as a default value) and action as its arguments and returns new state according to \texttt{SETTINGS} actions. Possible \texttt{ActionTypes} are conditionally checked with JavaScript's \texttt{switch} statement for a better code readability.
+
+\begin{lstlisting}[caption={Update of \texttt{state.settings.segments} value.},captionpos=b]
+export default (state = initialState, action) => {
+  switch (action.type) {
+    // ...
+    case ActionTypes.SETTINGS_SET_SEGMENTS:
+      return { ...state, segments: action.segments }
+   // ...
+    default: return state
+  }
+}
+\end{lstlisting}
+
+\subsubsection{Higher-order component}
+State and actions that SettingsPanel component needs to function properly are mapped to properties in SettingsPanel container - higher-order component. Code for SettingsPanel higher-order component creation is defined in \path{src/containers/SettingsPanel/index.js}.
+
+\begin{lstlisting}[caption={Function to map dispatchable \texttt{settings} action creators to component properties.},captionpos=b]
+const mapDispatchToProps = (dispatch) => {
+  return {
+    setXMin: (xMin) => dispatch(settingsSetXMin(xMin)),
+    setYMin: (yMin) => dispatch(settingsSetYMin(yMin)),
+    setZMin: (zMin) => dispatch(settingsSetZMin(zMin)),
+    setXMax: (xMax) => dispatch(settingsSetXMax(xMax)),
+    setYMax: (yMax) => dispatch(settingsSetYMax(yMax)),
+    setZMax: (zMax) => dispatch(settingsSetZMax(zMax)),
+    setSegments: (segments) => dispatch(settingsSetSegments(segments)),
+    setFunctionColor: (color) => dispatch(settingsSetFunctionColor(color)),
+  }
+}
+\end{lstlisting}
+
+\begin{lstlisting}[caption={Creation of \texttt{SettingsPanel} higher-order component.},captionpos=b]
+import { connect } from 'react-redux'
+import { SettingsPanel } from 'components'
+// ...
+export default connect(null, mapDispatchToProps)(SettingsPanel)
+\end{lstlisting}
+
+\subsubsection{Presentational component}
+Presentational SettingsPanel component is implementing the \texttt{datgui} from A-Frame API that we extended. Individual settings are handled by \texttt{SettingsController} component, which triggers the action when user changes the value by pointing to the settings with VR hand controller and pressing the trigger button. \texttt{SettingsPanel} code is defined in \path{src/components/SettingsPanel/index.js}.
+
+\begin{lstlisting}[caption={Presentational \textsl{Calculator} component code.},captionpos=b]
+const SettingsPanel = ({
+  name,
+  controllerLeft,
+  controllerRight,
+  setSegments,
+  ...props
+}) => {
+  return (
+    <Entity datgui={{ name, controllerLeft, controllerRight }} {...props}>
+      <SettingsController type="slider" name="segments" step={1} min={1} max={50} initialState={30} actionToTrigger={setSegments} />
+      { /* ...other settings... */ }
+    </Entity>
+  )
+} 
+\end{lstlisting}
 
 \begin{figure}[ht!]
 \centering
-\includegraphics[width=0.6\textwidth]{function_settings}
-\caption{SettingsPanel component}
-\label{r:4}
+\includegraphics[width=0.8\textwidth]{function_settings}
+\caption{\texttt{SettingsPanel} component}
+\label{r:65}
 \end{figure}
 
+\newpage
 \subsection{Hand controller components}
+VR hand controllers implement the \texttt{super-hands} A-Frame API that was extended by importing the \texttt{aframe-super-hands-component} in MathworldVR's \texttt{VRScene} component. \texttt{super-hands} A-Frame component adds natural, intuitive hand controller interactions, interprets input from tracked controllers and collision detection into interaction gestures and communicates those gestures to target entities for them to respond.
 
+The currently implemented gestures are:
+\begin{itemize}
+\item{Hover - Holding a controller in the collision space of an entity.}
+\item{Grab - Pressing a button while hovering an entity, potentially also moving it.}
+\item{Stretch - Grabbing an entity with two hands and resizing.}
+\item{Drag-drop - Dragging an entity onto another entity.}
+\end{itemize}
 
-\begin{lstlisting}
-import React from 'react'
-import { Entity } from 'aframe-react'
+\texttt{super-hand} includes components for typical reactions to the implemented gestures: \texttt{hoverable}, \texttt{grabbable}, \texttt{stretchable}, and \texttt{drag-droppable}. Code for hand controllers implementation used in MathworldVR is defined in \path{src/components/LeftController/index.js} and \path{src/components/LeftController/index.js} respectively.
 
-const RightController = (props) => {
-  return (
-    <Entity
-      id="rightController"
-      hand-controls="right"
-      sphere-collider={{ objects: '.interactive', radius: 0.05 }}
-      if-no-vr-headset={{ visible: false }}
-      super-hands
-      static-body={{ shape: 'sphere', sphereRadius: 0.05 }}
-      {...props}
-    />
-  )
-}
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=0.7\textwidth]{grab}
+\caption{Grabbing functionality}
+\label{r:5}
+\end{figure}
 
-export default RightController
-\end{lstlisting}
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=0.7\textwidth]{scaling}
+\caption{Scaling functionality}
+\label{r:6}
+\end{figure}
 
-
-\begin{lstlisting}
-import React from 'react'
-import { Entity } from 'aframe-react'
-
-const LeftController = (props) => {
-  return (
-    <Entity
-      id="leftController"
-      hand-controls="left"
-      sphere-collider={{ objects: '.interactive', radius: 0.05 }}
-      if-no-vr-headset={{ visible: false }}
-      teleport-controls
-      super-hands
-      static-body={{ shape: 'sphere', sphereRadius: 0.05 }}
-      {...props}
-    />
-  )
-}
-
-export default LeftController
-\end{lstlisting}
+\newpage
+\subsection{AttentionBox component}
+\texttt{AttentionBox} component is used for displaying semi-transparent rectangle with MathworldVR project information in the middle of the browser screen. \texttt{AttentionBox} component is defined in \path{src/components/AttentionBox/index.js}.
 
 \subsection{Adding components into A-Frame scene}
-
+To add MathworldVR components into the 3D environment, they need to be included as a children components of \texttt{VRScene} component:
 
 \begin{lstlisting}
 <VRScene>
@@ -1117,77 +919,17 @@ export default LeftController
 </VRScene>
 \end{lstlisting}
 
-\subsection{Interactions}
-
-\subsubsection{Grabbing}
-
-\begin{figure}[ht!]
-\centering
-\includegraphics[width=0.6\textwidth]{grab}
-\caption{Grabbing functionality}
-\label{r:5}
-\end{figure}
-
-\subsubsection{Scaling}
-
-\begin{figure}[ht!]
-\centering
-\includegraphics[width=0.6\textwidth]{scaling}
-\caption{Scaling functionality}
-\label{r:6}
-\end{figure}
-
-\subsection{Parsing equations with Math.js}
-
-
-\subsection{AttentionBox component}
-
-
 \subsection{Building and deploying the application to web hosting}
+Application's JavaScript code is bundled together by using NPM script \texttt{npm run build}, which produces production-ready bundle. Build script triggers pre-build task, which gets executed before the build and consists of  \texttt{npm run build:clean} (for removing all files from \texttt{/build} folder) and \texttt{npm run build:copy} (for copying static files like \texttt{index.html}, assets, images, CSS stylesheets into cleaned \texttt{/build} folder) scripts, called synchronously.
 
+To deploy the application, \texttt{/build} folder contents are copied to the server, hosted on \url{https://www.fortrabbit.com/}. Hosting is sponsored by \textsl{Sleighdogs, GmbH} company, which author is working for during writing of this thesis. Server us hosted under \url{http://vr.sld.gs/mathworldvr/} domain.
 
-%Začnime rovnicou
-%
-%\begin{equation}\label{r:2}
-%\frac{\ud^2y}{\ud t^2}+\frac{\ud y}{\ud t}+y =0, \qquad y(0)=1, \quad
-%y\,'(0)=15.
-%\end{equation}
-%
-%Grafický priebeh riešenia tejto rovnice vidíme na Obrázku \ref{o:2}.
-%
-%\begin{figure}[ht!]
-%\centering
-%\includegraphics[width=.6\textwidth,angle=0]{relaxcas.pdf}
-%\caption{Teplotná závislosť\/ spinovo-mriežkového relaxačného
-%času}\label{o:3}
-%\end{figure}
-%
-%%\tabcolsep=3pt % sirka stlpcov
-%%\renewcommand{\arraystretch}{1.2} % riadkovanie
-%\begin{table}[ht!]
-%\centering
-%\caption{Parametre získané z~meraní spinovo-mriežkových relaxačných
-%časov $T_1$}\label{t:2}
-%\medskip
-%\newcolumntype{d}{D{,}{,}{-1}}
-%\begin{tabular}{||c||d|d|d|d|d||}
-%\hhline{|t:==t:==:==:t|}
-%\multicolumn{1}{||c||}{}&\multicolumn{1}{c|}{PP --
-%01}&\multicolumn{1}{c|}{PP -- 05}&\multicolumn{1}{c|}{PP --
-%10}&\multicolumn{1}{c|}{PP -- 16}&\multicolumn{1}{c||}{PP -- 22} \\
-%\hhline{|:==:==:==:|}
-%C $\cdot 10^8$~(s$^{-2}$) & 10,1 & 10,0 & 11,0 & 9,2 & 8  \\
-%\hhline{||-|-|-|-|-|-||}
-%$\tau_0 \cdot 10^{-14}$~(s) & 2,63 & 1,44 & 0,95 & 2,21 & 10,83  \\
-%\hhline{||-|-|-|-|-|-||}
-%$E_{\text a}$~(kJ) & 34,26 & 8,33 & 39,76 & 37,31 & 31,86  \\
-%\hhline{||-|-|-|-|-|-||}
-%$T_{\min}$~(K) & 354 & 367 & 367 & 369 & 367  \\
-%\hhline{||-|-|-|-|-|-||}
-%$T_{1\min}$~(ms) & 141 & 160 & 157 & 175 & 181  \\
-%\hhline{||-|-|-|-|-|-||}
-%$\Delta M_2$~(Gs$^2$) & 5,49 & 5,66 & 5,16 & 5,09 & 5,02  \\
-%\hhline{|b:==b:==:==:b|}
-%\end{tabular}
-%\end{table}
+\newpage
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=1\textwidth]{main}
+\caption{Finalized MathworldVR application, deployed on live server.}
+\label{r:69}
+\end{figure}
 
