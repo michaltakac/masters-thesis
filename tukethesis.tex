@@ -9,6 +9,7 @@
 \usepackage{cmap}
 \usepackage{lmodern}
 \usepackage{url}
+
 \expandafter\def\expandafter\UrlBreaks\expandafter{\UrlBreaks%  save the current one
   \do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j%
   \do\k\do\l\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t%
@@ -110,7 +111,7 @@ pdfsubject={Bachelor's Thesis}
 \author{Bc. Michal Takáč}
 \title{Application of Virtual and Augmented Reality in Education}
 \subtitle{}
-\abstrakte{In this thesis we set to explore the possibilities of virtual and augmented reality (VR/AR) through the use of modern web technologies and development practices with the goal of finding novel approaches and applications in higher education with focus on mathematics. First a brief history of VR and AR is described followed by overview regarding the current problems and use cases of VR and AR systems and overview of current commercially available headsets. Then the novel, experimental Graphical User Interface (GUI) is presented, utilizing six degrees of freedom in room-scale virtual world within web page with use of interactions with VR hand controlelrs to provide strong visual representations and visualizations of parametrized functions, helping students to approach learning differently and understand difficult math concepts faster. In the end of thesis we propose future possibilities and how the technology could shape student's knowledge.}
+\abstrakte{In this thesis I set to explore the possibilities of virtual and augmented reality (VR/AR) through the use of modern web technologies and development practices with the goal of finding novel approaches and applications in higher education with focus on mathematics. First a brief history of VR and AR is described followed by overview regarding the current problems and use cases of VR and AR systems. Then the novel, experimental Graphical User Interface (GUI) is presented, utilizing interactions with VR hand controllers and six degrees of freedom in room-scale virtual world within web page, to provide strong visual representations and visualizations of parametrized functions, helping students to approach learning differently and understand difficult math concepts faster. In the end of thesis I propose future possibilities and how the technology could shape student's knowledge.}
 \keywords{Virtual reality, Augmented reality, Education, Mathematics}
 \degree{Engineer}
 \university{Technical University of Košice}
@@ -125,15 +126,9 @@ pdfsubject={Bachelor's Thesis}
 %\consultantb{RNDr.~Marián Čierny, DrSc.}
 \dateofsubmission{April. 21. 2017} 
 \town{Košice}
-\abstrakt{Abstrakt je povinnou súčasťou každej práce. Je výstižnou
-charakteristikou obsahu dokumentu. Nevyjadruje hodnotiace stanovisko
-autora. Má byť\/ taký informatívny, ako to povoľuje podstata práce.
-Text abstraktu sa píše ako jeden odstavec. Abstrakt neobsahuje odkazy
-na samotný text práce. Mal by mať\/ rozsah 250 až 500 slov. Pri
-štylizácii sa používajú celé vety, slovesá v činnom rode a tretej
-osobe. Používa sa odborná terminológia, menej zvyčajné termíny,
-skratky a~symboly sa pri prvom výskyte v texte definujú.}
-\klucoveslova{Optimalizácia, záverečná práca, písanie}
+
+\abstrakt{V tejto práci som sa zaoberal možnosťami virtuálnej a rozšírenej reality (VR / AR) prostredníctvom využitia moderných webových technológií a vývojových postupov s cieľom nájsť nové prístupy a aplikácie vo vysokoškolskom vzdelávaní so zameraním na matematiku. Najprv je popísaná stručná história VR a AR, po ktorej následuje prehľad o aktuálnych problémoch a prípadoch použitia systémov VR a AR. Potom je prezentované experimentálne grafické užívateľské rozhranie (GUI), ktoré využíva interakcie s ručnými VR ovládačmi a šesť stupňami voľnosti vo virtuálnom svete v rámci webovej stránky, poskytujúce vizuálne reprezentácie a vizualizácie parametrizovaných funkcií. Pomáha študentom pristúpiť k štúdiu iným spôsobom a rýchlejšie porozumieť zložitým matematickým konceptom. V závere práce navrhujem budúce možnosti využitia, ďalšie smerovanie projektu a ako môže technológia formovať vedomosti študentov.}
+\klucoveslova{Virtuálna realita, Rozšírená realita, Vzdelávanie, Matematika}
 
 \begin{document}
 \renewcommand\theHfigure{\theHsection.\arabic{figure}}
@@ -171,13 +166,19 @@ skratky a~symboly sa pri prvom výskyte v texte definujú.}
 %\kerrata
 
 \abstrakte % Abstract in English
-
-%\abstrakt % Abstract in Slovak
+\newpage
+\abstrakt % Abstract in Slovak
 
 \endabstract % end of the Abstracts page
 
 %% input the 'Assign of the Thesis'
-\assignthesis
+%\assignthesis
+
+\includegraphics[trim=3cm 0 0 5cm]{zadavaci_list.pdf}
+\newpage
+
+
+%\includegraphics[width=\textwidth,center]{zadavaci_list.pdf}
 
 %% input the 'Declaration' of the author
 \declaration
@@ -227,6 +228,7 @@ Mathematical knowledge is often fundamental when solving real life problems. Esp
 \begin{description}
 \item[DoF] Degrees of freedom (6DoF = six degrees of freedom)
 \item[VR] Virtual Reality
+\item[AR] Augmented Reality
 \item[WebVR] Virtual Reality on the web
 \item[API] Application Programming Interface
 \item[ES6] ECMAScript version 6
@@ -235,6 +237,7 @@ Mathematical knowledge is often fundamental when solving real life problems. Esp
 \item[WebGL] Web-based Graphics Library
 \item[HMD] Head-mounted display
 \item[VLE] Virtual Learning Environment
+\item[GUI] Graphical User Interface
 \end{description}
 
 \endlistofterms

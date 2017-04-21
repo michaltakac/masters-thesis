@@ -36,9 +36,9 @@
 }
 
 \section{Analysis of current state}
-Undoubtedly, VR has attracted a lot of interest of people in the~last few years. Being a new paradigm of user interface it offers great benefits in many application areas. It provides an~easy, powerful and intuitive way of human-computer interaction. the~user can watch and manipulate the~simulated environment in the~same way we act in the~real world, without any need to learn how the~complicated (and often clumsy) user interface works. Therefore many applications like flight simulators, architectural walkthrough or data visualization systems were developed relatively fast. Later on, VR has was applied as a teleoperating and collaborative medium, and also in the~entertainment area, which now became de-facto the~main interest of VR developers and emerging VR companies.
+Undoubtedly, VR has attracted a lot of interest of people in the~last few years. Being a new paradigm of user interface it offers great benefits in many application areas. It provides an~easy, powerful and intuitive way of human-computer interaction. The~user can watch and manipulate the~simulated environment in the~same way we act in the~real world, without any need to learn how the~complicated (and often clumsy) user interface works. Therefore many applications like flight simulators, architectural walkthrough or data visualization systems were developed relatively fast. Later on, VR has was applied as a teleoperating and collaborative medium, and also in the~entertainment area, which now became de-facto the~main interest of VR developers and emerging VR companies.
 
-One can say that virtual reality established itself in many disciplines of human activities, as a medium that allows easier perception of data or natural phenomena appearance. Therefore the~education purposes seem to be the~most natural ones. the~intuitive presentation of construction rules (virtual Lego-set), visiting a virtual museum, virtual painting studio or virtual music playing \citep{loeffler} are just a few examples of possible applications. 
+One can say that virtual reality established itself in many disciplines of human activities, as a medium that allows easier perception of data or natural phenomena appearance. Therefore the~education purposes seem to be the~most natural ones. The~intuitive presentation of construction rules (virtual Lego-set), visiting a virtual museum, virtual painting studio or virtual music playing \citep{loeffler} are just a few examples of possible applications. 
 
 Virtual environments are inherently three-dimensional. They can provide interactive playgrounds with a degree of interactivity that goes far beyond what is possible in reality. If using VR as a tool for mathematics education, it ideally offers an~added benefit to learning in a wide range of mathematical domains \citep{kaufmann}.
 
@@ -85,7 +85,7 @@ The~major advantage of WebVR over natively built experiences is the~same as the~
 
 \section{Technologies and tools for development}
 \subsection{JavaScript}
-JavaScript is an~interpreted programming language with object-oriented (OO) capabilities. Syntactically, the~core JavaScript language resembles C, C++ and Java, with programming constructs such as the~if statement, the~while loop, and the~&& operator. the~similarity ends with the~syntactic resemblance, however. JavaScript is a loosly typed language, which means that variables do not need to have a type specified. Object in JavaScript map property names to arbitrary property values. In this way they are more like hash tables or associative arrays (in Perl) then they are structs (in C) or objects (in C++ or Java). the~OO inheritance mechanism of JavaScript is prototype-based. This is different from inheritance in C++ and Java. \cite{flanagan}
+JavaScript is an~interpreted programming language with object-oriented (OO) capabilities. Syntactically, the~core JavaScript language resembles C, C++ and Java, with programming constructs such as the~if statement, the~while loop, and the~&& operator. Similarity ends with the~syntactic resemblance, however. JavaScript is a loosly typed language, which means that variables do not need to have a type specified. Object in JavaScript map property names to arbitrary property values. In this way they are more like hash tables or associative arrays (in Perl) then they are structs (in C) or objects (in C++ or Java). The~OO inheritance mechanism of JavaScript is prototype-based. This is different from inheritance in C++ and Java. \cite{flanagan}
 
 JavaScript is mostly used in web browsers. It allows scripts to interact with the~user, control the~web browser and alter the~document content that appears within the~web browser window. This embedded version of JavaScript runs scripts embedded within HTML web pages. It's called client-side JavaScript to distinguish them from scripts that run on the~server, since JavaScript can also be used on server-side with Node.js. \cite{flanagan}
 
@@ -94,7 +94,7 @@ JavaScript programming language is standardized in the~ECMA-262 specification an
 \subsection{NPM}
 NPM is the~package manager for JavaScript and the~world’s largest software registry, which makes it easy for JavaScript developers to share the~code that they've created to solve particular problems, and for other developers to reuse that code in their own applications.\cite{npm}
 
-The~bits of reusable code are called packages, or sometimes modules. A package is just a directory with one or more files in it, that also has a file called "package.json" with some metadata about this package. A typical application, such as a website, will depend on dozens or hundreds of packages. These packages are often small. the~general idea is to create a small building block which solves one problem and solves it well. This makes it possible for developers to compose larger, custom solutions out of these small, shared building blocks.\cite{npm}
+The~bits of reusable code are called packages, or sometimes modules. A package is just a directory with one or more files in it, that also has a file called "package.json" with some metadata about this package. A typical application, such as a website, will depend on dozens or hundreds of packages. These packages are often small. The~general idea is to create a small building block which solves one problem and solves it well. This makes it possible for developers to compose larger, custom solutions out of these small, shared building blocks.\cite{npm}
 
 There's lots of benefits to this. It makes it possible for development teams to draw on expertise outside of the~organization they are working in by bringing in packages from people who have focused on particular problem areas. But even if they don't reuse code from people outside of the~organization, using this kind of module based approach can actually help the~team work together better, and can also make it possible to reuse code across projects.\cite{npm}
 
@@ -136,7 +136,7 @@ box.addEventListener('click', function () {
 });
 \end{lstlisting}
 
-A-Frame components are being based on the~DOM, so most existing client-side libraries and frameworks such as React, Vue.js, d3.js, jQuery, or Angular work on top of A-Frame. the~existing web ecosystem of tools were built on top of the~notion of manipulating plain HTML and are thus compatible with A-Frame. \cite{aframe-intro}
+A-Frame components are being based on the~DOM, so most existing client-side libraries and frameworks such as React, Vue.js, d3.js, jQuery, or Angular work on top of A-Frame. The~existing web ecosystem of tools were built on top of the~notion of manipulating plain HTML and are thus compatible with A-Frame. \cite{aframe-intro}
 
 \subsubsection{Entity-Component System}
 A-Frame at its core is an~entity-component-system framework. Entity-component-system (ECS) is a pattern popular in game development and is prominent in game engines like Unity. ECS favors composition over inheritance. Every single object in the~scene is an~entity. an~entity is an~empty placeholder object that by itself does nothing. We plug in reusable components to attach appearance, behavior or functionality. We can also put different components together and configure them in order to define different types of objects. \cite{aframe-intro}
@@ -149,7 +149,7 @@ In A-Frame, an~entity is simply an~HTML tag:
 <a-entity></a-entity>
 \end{lstlisting}
 
-A-Frame components are reusable modules that can be plugged into any entity. They are allowed to do anything and have full access to JavaScript, Three.js, and Web APIs. the~structure of a basic component may look like this:
+A-Frame components are reusable modules that can be plugged into any entity. They are allowed to do anything and have full access to JavaScript, Three.js, and Web APIs. The~structure of a basic component may look like this:
 
 \begin{lstlisting}
 AFRAME.registerComponent('foo', {
@@ -179,7 +179,7 @@ A-Frame ships with several components, but since A-Frame is fully extensible at 
 These components are curated and collected into the~A-Frame Registry. This is similar to the~collection of components and modules on the~Unity Asset Store or NPM, but free and open source. A-Frame maintainers and core developers make sure they work well and from there they are easily searchable and installable through multiple channels, one of which is through the~A-Frame Inspector. \cite{aframe-intro}
 
 \subsubsection{A-Frame Inspector}
-The~A-Frame Inspector is a visual tool for inspecting and editing A-Frame scenes. Similar to the~browser’s DOM Inspector, you can go to any A-Frame scene, local or on the~Web, and hit \texttt{<ctrl>} + \texttt{<alt>} + \texttt{i} on your keyboard. This will open the~visual Inspector where you can make changes and return to the~scene with the~reflected changes. You can visually move and place objects, change properties of the~components, or pan the~camera around to see a different view of the~scene. It’s similar to viewing the~source code in an~interactive way. the~A-Frame Inspector is integrated with the~A-Frame Registry. From the~Inspector, you can install components from the~Registry and attach them to objects in the~scene. \cite{aframe-intro}
+The~A-Frame Inspector is a visual tool for inspecting and editing A-Frame scenes. Similar to the~browser’s DOM Inspector, you can go to any A-Frame scene, local or on the~Web, and hit \texttt{<ctrl>} + \texttt{<alt>} + \texttt{i} on your keyboard. This will open the~visual Inspector where you can make changes and return to the~scene with the~reflected changes. You can visually move and place objects, change properties of the~components, or pan the~camera around to see a different view of the~scene. It’s similar to viewing the~source code in an~interactive way. The~A-Frame Inspector is integrated with the~A-Frame Registry. From the~Inspector, you can install components from the~Registry and attach them to objects in the~scene. \cite{aframe-intro}
 
 \begin{figure}[ht!]
 \centering
@@ -189,7 +189,7 @@ The~A-Frame Inspector is a visual tool for inspecting and editing A-Frame scenes
 \end{figure}
 
 \subsubsection{Device and Platform Support}
-Devices and platform support depends on how well the~browsers support certain devices and APIs. A-Frame supports both flat (3D on a normal screen) and WebVR experiences, though its focus is heavily VR. Support for flat experiences primarily depends on a browser’s WebGL support. We can see which browsers support WebGL at \url{http://caniuse.com/#feat=webgl}. Support for VR experiences, along with WebGL support, depends on a browser’s support for the~WebVR API. You can see which browsers currently support the~WebVR API at \url{https://webvr.rocks}. A-Frame supports version 1.0 of the~WebVR API. the~exception to this is for mobile devices, which are supported through the~WebVR Polyfill. A-Frame currently supports controllers with six degrees of freedom (6DoF) using experimental build of Chromium browser with experimental controller support (e.g., Vive controllers). \cite{aframe-intro}
+Devices and platform support depends on how well the~browsers support certain devices and APIs. A-Frame supports both flat (3D on a normal screen) and WebVR experiences, though its focus is heavily VR. Support for flat experiences primarily depends on a browser’s WebGL support. We can see which browsers support WebGL at \url{http://caniuse.com/#feat=webgl}. Support for VR experiences, along with WebGL support, depends on a browser’s support for the~WebVR API. You can see which browsers currently support the~WebVR API at \url{https://webvr.rocks}. A-Frame supports version 1.0 of the~WebVR API. The~exception to this is for mobile devices, which are supported through the~WebVR Polyfill. A-Frame currently supports controllers with six degrees of freedom (6DoF) using experimental build of Chromium browser with experimental controller support (e.g., Vive controllers). \cite{aframe-intro}
 
 \subsection{Math.js}
 \textsl{Math.js is an~extensive math library for JavaScript and Node.js. It features a flexible expression parser with support for symbolic computation, comes with a large set of built-in functions and constants, and offers an~integrated solution to work with different data types like numbers, big numbers, complex numbers, fractions, units, and matrices.} \cite{mathjs}
@@ -207,7 +207,7 @@ Flux is an~application architecture created by Facebook for building client-side
 \textsl{Flux abandons MVC in favor of a uni-directional data flow. When a user interacts with a React view, the~view propagates an~action through a central dispatcher, to the~various stores that hold the~application's data and business logic, which updates all of the~views that are affected. This works especially well with React's declarative programming style, which allows the~store to send updates without specifying how to transition views between states.} \citep{flux}
 
 \subsubsection{Structure and Data Flow in Flux architecture}
-\textsl{A uni-directional data flow is the~main consequence of using the~Flux pattern, and the~diagram below should be the~primary mental model for the~Flux programmer. the~dispatcher, stores and views are independent nodes with distinct inputs and outputs. the~actions are simple objects containing a action type that identifies the~property and the~new data that is passed along with the~action.} \citep{flux}
+\textsl{A uni-directional data flow is the~main consequence of using the~Flux pattern, and the~diagram below should be the~primary mental model for the~Flux programmer. The~dispatcher, stores and views are independent nodes with distinct inputs and outputs. The~actions are simple objects containing a action type that identifies the~property and the~new data that is passed along with the~action.} \citep{flux}
 
 \begin{figure}[ht!]
 \centering
@@ -218,7 +218,7 @@ Flux is an~application architecture created by Facebook for building client-side
 
 \textsl{The~views may cause a new action to be propagated through the~system in response to user interactions.} \citep{flux}
 
-\textsl{All data flows through the~dispatcher as a central hub. Actions are provided to the~dispatcher in an~action creator method, and most often originate from user interactions with the~views. the~dispatcher then invokes the~callbacks that the~stores have registered with it, dispatching actions to all stores. Within their registered callbacks, stores respond to whichever actions are relevant to the~state they maintain. the~stores then emit a change event to alert the~controller-views that a change to the~data layer has occurred. Controller-views listen for these events and retrieve data from the~stores in an~event handler. the~controller-views call their own setState() method, causing a re-rendering of themselves and all of their descendants in the~component tree.} \citep{flux}
+\textsl{All data flows through the~dispatcher as a central hub. Actions are provided to the~dispatcher in an~action creator method, and most often originate from user interactions with the~views. The~dispatcher then invokes the~callbacks that the~stores have registered with it, dispatching actions to all stores. Within their registered callbacks, stores respond to whichever actions are relevant to the~state they maintain. The~stores then emit a change event to alert the~controller-views that a change to the~data layer has occurred. Controller-views listen for these events and retrieve data from the~stores in an~event handler. The~controller-views call their own setState() method, causing a re-rendering of themselves and all of their descendants in the~component tree.} \citep{flux}
 
 \begin{figure}[ht!]
 \centering
@@ -234,7 +234,7 @@ Flux is an~application architecture created by Facebook for building client-side
 \subsection{Redux}
 Redux is a predictable state container for JavaScript applications, inspired by several important qualities of Flux architecture. It helps developers write applications that behave consistently, run in different environments (client, server, and native), and are easy to test. On top of that, it provides a great developer experience, such as live code editing combined with a time traveling debugger.\citep{redux-intro} We are using Redux together with React, but in general it can be used with any other view library.
 
-The~whole state of application is stored in an~object tree inside a single store. the~only way to change the~state tree is to emit an~action, an~object describing what happened. To specify how the~actions transform the~state tree, we write pure reducers.\citep{redux-intro}
+The~whole state of application is stored in an~object tree inside a single store. The~only way to change the~state tree is to emit an~action, an~object describing what happened. To specify how the~actions transform the~state tree, we write pure reducers.\citep{redux-intro}
 
 Instead of mutating the~state directly, we specify the~mutations we want to happen with plain objects called actions. Then we write a special function called a reducer to decide how every action transforms the~entire application's state.\citep{redux-intro}
 

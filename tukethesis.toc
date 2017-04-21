@@ -1,5 +1,5 @@
 \select@language {english}
-\contentsline {section}{\hbox to\@tempdima {\hfil }Introduction}{1}{section*.7}
+\contentsline {section}{\hbox to\@tempdima {\hfil }Introduction}{1}{section*.6}
 \contentsline {section}{\numberline {1}Problem expression}{3}{section.1}
 \contentsline {subsection}{\numberline {1.1}Methodology of the~thesiss}{3}{subsection.1.1}
 \contentsline {section}{\numberline {2}Analysis of current state}{5}{section.2}
@@ -22,7 +22,7 @@
 \contentsline {subsection}{\numberline {3.8}Redux}{19}{subsection.3.8}
 \contentsline {subsubsection}{\numberline {3.8.1}Three Principles of Redux}{20}{subsubsection.3.8.1}
 \contentsline {subsection}{\numberline {3.9}Webpack}{21}{subsection.3.9}
-\contentsline {section}{\numberline {4}Conceptualisation and design}{23}{section.4}
+\contentsline {section}{\numberline {4}Software design of virtual reality application}{23}{section.4}
 \contentsline {subsection}{\numberline {4.1}Inputs and objections}{23}{subsection.4.1}
 \contentsline {subsection}{\numberline {4.2}Functionality planning}{24}{subsection.4.2}
 \contentsline {section}{\numberline {5}Implementation of virtual reality application}{26}{section.5}
@@ -74,7 +74,7 @@
 \contentsline {subsection}{\numberline {5.22}Adding components into A-Frame scene}{61}{subsection.5.22}
 \contentsline {subsection}{\numberline {5.23}Building and deploying the application to web hosting}{62}{subsection.5.23}
 \contentsline {section}{\numberline {6}Conclusion}{64}{section.6}
-\contentsline {section}{\hbox to\@tempdima {\hfil }{Bibliography}}{66}{section*.8}
-\contentsline {section}{\hbox to\@tempdima {\hfil }Appendices}{68}{section*.9}
-\contentsline {section}{\hbox to\@tempdima {\hfil }Appendix A}{69}{section*.10}
-\contentsline {section}{\hbox to\@tempdima {\hfil }Appendix B}{74}{section*.17}
+\contentsline {section}{\hbox to\@tempdima {\hfil }{Bibliography}}{66}{section*.7}
+\contentsline {section}{\hbox to\@tempdima {\hfil }Appendices}{68}{section*.8}
+\contentsline {section}{\hbox to\@tempdima {\hfil }Appendix A}{69}{section*.9}
+\contentsline {section}{\hbox to\@tempdima {\hfil }Appendix B}{74}{section*.16}
